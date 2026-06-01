@@ -4,7 +4,9 @@
 
 The name is half "noob skill" and half "noobs kill," which is exactly the right level of serious for this repo.
 
-There is not much here yet. The first skill will land soon.
+## Skills
+
+- [`humanizer-danish-addendum`](skills/humanizer-danish-addendum/) — a discoverable bolt-on skill for humanizing Danish text with Humanizer-style agents. It catches Danish-specific AI tells and includes instructions for using it alongside or merging it into an existing Humanizer skill.
 
 ## Layout
 
