@@ -13,6 +13,8 @@ This is a bolt-on skill for the `humanizer` skill. Use the parent `humanizer` sk
 
 Core principle: Danish AI writing often sounds like English translated underneath. Fix the translated register and rhythm without damaging legitimate Danish technical language.
 
+Credit: this addendum is designed to complement the original [Humanizer skill by blader](https://github.com/blader/humanizer). The Humanizer skill is based on Wikipedia's [Signs of AI writing](https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing) guide maintained by WikiProject AI Cleanup.
+
 ## How to Use
 
 When a user asks to humanize Danish text:
