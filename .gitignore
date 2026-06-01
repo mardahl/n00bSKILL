@@ -1,0 +1,27 @@
+# macOS
+.DS_Store
+
+# Editors
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Local agent and assistant state
+.opencode/
+.claude/
+.agents/
+
+# Temporary work and generated output
+tmp/
+temp/
+scratch/
+transcripts/
+*.log
+
+# Secrets and local environment
+.env
+.env.*
+!.env.example
+*.pem
+*.key
