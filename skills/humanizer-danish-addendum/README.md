@@ -1,6 +1,8 @@
 # Humanizer Danish Addendum
 
-`humanizer-danish-addendum` is a discoverable bolt-on skill for agents that already use a Humanizer-style skill to remove AI writing patterns.
+`humanizer-danish-addendum` is the single landing folder for this repo's Danish Humanizer guidance.
+
+It contains the source Danish addendum for people who already run a Humanizer-style skill, and it also includes a ready-made `.skill` package for Claude Teams or anyone who wants a complete upload file.
 
 The parent Humanizer skill catches structural patterns such as significance inflation, rule-of-three rhythm, generic positive conclusions, and promotional phrasing. This addendum covers Danish-specific tells: English idiom calques, translated syntax, Danish business filler, flat earnestness, low burstiness, and the risk of over-correcting legitimate Danish IT fagsprog.
 
@@ -10,7 +12,9 @@ If you run Claude Team/Enterprise or just want one ready-made combined skill fil
 
 [`package/humanizer-danish.skill`](package/humanizer-danish.skill)
 
-This is the complete `humanizer-danish` skill package. It includes the original Humanizer guidance plus this Danish addendum in one `.skill` upload file.
+This package contains the complete combined `humanizer-danish` skill: the original Humanizer guidance plus this Danish addendum in one `.skill` upload file.
+
+The package is an install artifact, not a separate repo skill folder. This folder remains the source and explanation for the Danish addendum.
 
 Credit: this addendum is designed to complement the original [Humanizer skill by blader](https://github.com/blader/humanizer). The original Humanizer skill is based on Wikipedia's [Signs of AI writing](https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing) guide maintained by WikiProject AI Cleanup.
 
@@ -79,9 +83,9 @@ When asked to humanize Danish text:
 4. Keep normal Danish IT terms and English technical vocabulary when they are standard practice.
 5. Report briefly which Danish tells were removed.
 
-## Why This Is Separate
+## Why There Is One Folder
 
-Keeping this as a separate skill avoids forking or duplicating a full Humanizer skill. It also makes the Danish guidance easy to update independently.
+The Danish guidance lives in one repo folder to keep the install story simple. Local agent users can install only the addendum, while Claude Team/Enterprise users can upload the ready-made combined `.skill` file from `package/`.
 
 ## Attribution
 
