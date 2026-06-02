@@ -8,6 +8,7 @@ This repository is a public collection of reusable AI agent skills. Keep the str
 - Each skill folder is the landing page for that skill and must include a `README.md`.
 - Each skill folder must include the source `SKILL.md` unless it is explicitly documentation-only.
 - Any installable artifacts for a skill, such as `.skill` files, belong inside `skills/<skill-name>/package/`.
+- Packaged `.skill` files must use the standard format: a zip archive renamed with the `.skill` extension. Do not create plain-text `.skill` files.
 - Do not put skill-specific install artifacts in a repo-level `packages/` folder. That separates the download from the skill explanation and creates a confusing user journey.
 - Do not split one skill across multiple sibling folders unless one folder is explicitly a separate skill with a separate audience.
 

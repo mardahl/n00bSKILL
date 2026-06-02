@@ -28,7 +28,6 @@ Upload it in Claude Team/Enterprise under organization skills, then enable the s
 
 - `SKILL.md`: installable source skill for opencode and Claude Code.
 - `report-writing-source-notes.md`: paraphrased source notes from Omatskrive.dk's 12-part report-writing series.
-- `test-notes.md`: skill pressure-test notes.
 - `README.md`: this landing page.
 - `package/danish-report-writer.skill`: upload-ready Claude artifact.
 
@@ -51,7 +50,7 @@ Restart the agent application after installing.
 
 ## Source Versus Package
 
-`SKILL.md` is the source skill file. `report-writing-source-notes.md` is supporting reference material. The `.skill` file in `package/` is an install artifact, not a separate skill folder.
+`SKILL.md` is the source skill file. `report-writing-source-notes.md` is supporting reference material. The `.skill` file in `package/` is a zip archive renamed with the `.skill` extension for upload, not a separate skill folder.
 
 ## Attribution
 
