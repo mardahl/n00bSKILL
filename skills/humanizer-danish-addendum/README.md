@@ -1,32 +1,38 @@
-# Humanizer Danish Addendum
+# Humanizer Danish addendum
 
-`humanizer-danish-addendum` is the single landing folder for this repo's Danish Humanizer guidance.
+A Danish add-on for the Humanizer skill.
 
-It contains the source Danish addendum for people who already run a Humanizer-style skill, and it also includes a ready-made `.skill` package for Claude Teams or anyone who wants a complete upload file.
+Use it when Danish AI text sounds translated, too polished, or weirdly corporate. It catches Danish-specific tells the English Humanizer rules miss: direct English idiom translations, English sentence rhythm, Danish business filler, flat ChatGPT enthusiasm, and over-correction of normal Danish IT language.
 
-The parent Humanizer skill catches structural patterns such as significance inflation, rule-of-three rhythm, generic positive conclusions, and promotional phrasing. This addendum covers Danish-specific tells: English idiom calques, translated syntax, Danish business filler, flat earnestness, low burstiness, and the risk of over-correcting legitimate Danish IT fagsprog.
+## Kort på dansk
 
-## Ready-Made Claude Package
+Hvis dansk AI-tekst lyder som engelsk med danske ord, er det her addendum lavet til oprydningen.
 
-If you run Claude Team/Enterprise or just want one ready-made combined skill file, upload this package:
+Det fanger især direkte oversatte engelske vendinger, stiv syntaks, konsulentsprog og den der lidt for pæne ChatGPT-tone.
+
+Brug det sammen med Humanizer, eller upload den færdige `.skill`-fil i Claude Teams.
+
+## What to install
+
+For Claude Team/Enterprise, upload this file in the organization skill upload screen:
 
 [`package/humanizer-danish.skill`](package/humanizer-danish.skill)
 
-This package contains the complete combined `humanizer-danish` skill: the original Humanizer guidance plus this Danish addendum in one `.skill` upload file.
+That file is the combined `humanizer-danish` skill: the original Humanizer guidance plus this Danish addendum in one `.skill` upload.
 
-The package is an install artifact, not a separate repo skill folder. This folder remains the source and explanation for the Danish addendum.
+For opencode or Claude Code, install this folder as a companion skill and keep your existing `humanizer` skill.
 
-Credit: this addendum is designed to complement the original [Humanizer skill by blader](https://github.com/blader/humanizer). The original Humanizer skill is based on Wikipedia's [Signs of AI writing](https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing) guide maintained by WikiProject AI Cleanup.
+Source versus artifact: `SKILL.md` is the source addendum. `package/humanizer-danish.skill` is the upload-ready package.
 
 ## Files
 
-- `SKILL.md`: standalone discoverable skill for opencode and Claude Code.
-- `README.md`: install, merge, and agent instructions.
-- `package/humanizer-danish.skill`: ready-made combined Claude upload package.
+- `SKILL.md`: source addendum for opencode and Claude Code
+- `README.md`: install notes and usage guidance
+- `package/humanizer-danish.skill`: combined Claude upload package
 
-## Use as a Companion Skill
+## Install as a companion skill
 
-This is the recommended setup. Keep your existing `humanizer` skill unchanged and install this skill next to it.
+This is the cleanest setup for local agents. Leave `humanizer` alone and install this skill next to it.
 
 ### opencode
 
@@ -37,12 +43,12 @@ Copy or symlink this folder into one of opencode's skill locations:
 .opencode/skills/humanizer-danish-addendum/
 ```
 
-Then restart opencode. opencode loads skills at startup.
+Restart opencode after copying the folder.
 
 When Danish text is involved, the agent should load both skills:
 
-1. `humanizer` for general AI-writing patterns.
-2. `humanizer-danish-addendum` for Danish-specific patterns.
+1. `humanizer` for general AI-writing patterns
+2. `humanizer-danish-addendum` for Danish-specific patterns
 
 ### Claude Code
 
@@ -52,40 +58,36 @@ Copy or symlink this folder into Claude Code's skill location:
 ~/.claude/skills/humanizer-danish-addendum/
 ```
 
-Restart Claude Code or start a new session so the skill index refreshes.
+Restart Claude Code or start a new session.
 
 When Danish text is involved, the agent should load both skills:
 
-1. `humanizer` for general AI-writing patterns.
-2. `humanizer-danish-addendum` for Danish-specific patterns.
+1. `humanizer` for general AI-writing patterns
+2. `humanizer-danish-addendum` for Danish-specific patterns
 
-## Merge into an Existing Humanizer Skill
+## Merge into an existing Humanizer skill
 
-Use this only if you want one combined Humanizer skill instead of two skills.
+Use this only if you want one local skill file instead of two companion skills.
 
 For opencode or Claude Code agents doing the merge:
 
-1. Locate the existing `humanizer/SKILL.md`.
-2. Keep the existing Humanizer frontmatter, name, and trigger description unless the user explicitly asks to change them.
-3. Copy the body content from this skill starting at `# Humanizer Danish Addendum`.
-4. Paste it into the existing Humanizer skill before the parent skill's final process/output section or near its language-specific guidance section.
-5. Do not duplicate YAML frontmatter from this skill inside the parent skill.
-6. Preserve the caveat about not over-correcting Danish IT fagsprog.
-7. Restart the agent application after saving.
+1. Locate the existing `humanizer/SKILL.md`
+2. Keep the existing Humanizer frontmatter unless the user asks to change it
+3. Copy this skill body starting at `# Humanizer Danish Addendum`
+4. Paste it near the parent skill's language-specific guidance or before its final process section
+5. Do not copy this skill's YAML frontmatter into the parent skill
+6. Keep the caveat about not over-correcting Danish IT fagsprog
+7. Restart the agent application after saving
 
-## Agent Instructions
+## Agent instructions
 
 When asked to humanize Danish text:
 
-1. Apply the general Humanizer patterns first.
-2. Run a Danish pass using D1-D5 from this addendum.
-3. Treat the watch-list as judgment prompts, not mechanical rules.
-4. Keep normal Danish IT terms and English technical vocabulary when they are standard practice.
-5. Report briefly which Danish tells were removed.
-
-## Why There Is One Folder
-
-The Danish guidance lives in one repo folder to keep the install story simple. Local agent users can install only the addendum, while Claude Team/Enterprise users can upload the ready-made combined `.skill` file from `package/`.
+1. Apply the general Humanizer patterns first
+2. Run a Danish pass using D1-D5 from this addendum
+3. Treat the watch list as judgment prompts, not mechanical rules
+4. Keep normal Danish IT terms and English technical vocabulary when they are standard practice
+5. Report briefly which Danish tells were removed
 
 ## Attribution
 
