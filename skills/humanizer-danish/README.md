@@ -1,12 +1,16 @@
 # Humanizer Danish
 
-Looking for the Claude upload file? Use:
-
-[`../../packages/humanizer-danish.skill`](../../packages/humanizer-danish.skill)
-
-This folder is the source version of the skill. Claude's organization upload flow wants the packaged `.skill` file, not this folder and not `SKILL.md` by itself.
-
 `humanizer-danish` is a combined Humanizer skill for Claude.ai Team and Enterprise organization skill upload. It includes the original Humanizer guidance plus the Danish-specific addendum in one uploadable package.
+
+## Download
+
+If you are installing this in Claude, upload this file:
+
+[`package/humanizer-danish.skill`](package/humanizer-danish.skill)
+
+Do not upload `SKILL.md` by itself. Claude's hosted skill upload expects an archive that contains a skill folder with `SKILL.md` inside.
+
+## What It Does
 
 Use this when you want one skill that handles both general AI-writing tells and Danish-specific tells, rather than installing `humanizer` and `humanizer-danish-addendum` separately.
 
@@ -22,7 +26,7 @@ Use this when you want one skill that handles both general AI-writing tells and 
 Upload this file:
 
 ```text
-packages/humanizer-danish.skill
+skills/humanizer-danish/package/humanizer-danish.skill
 ```
 
 The `.skill` file contains the complete skill folder and includes `SKILL.md`.
@@ -32,7 +36,7 @@ Organization owners can provision it for everyone:
 1. Open `Organization settings > Skills` in Claude.
 2. Enable `Code execution and file creation` and `Skills` if they are not already enabled.
 3. In `Organization skills`, click `+ Add`.
-4. Upload `packages/humanizer-danish.skill`.
+4. Upload `skills/humanizer-danish/package/humanizer-danish.skill`.
 
 Provisioned skills appear for members under `Customize > Skills`. Members can toggle the skill off, but only owners can add or remove organization-provisioned skills.
 
@@ -43,7 +47,7 @@ For personal use, upload the same package from `Customize > Skills`:
 1. Click `+`.
 2. Choose `Create skill`.
 3. Select `Upload a skill`.
-4. Upload `packages/humanizer-danish.skill`.
+4. Upload `skills/humanizer-danish/package/humanizer-danish.skill`.
 5. Toggle the skill on.
 
 ## Claude Code or opencode Installation

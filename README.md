@@ -1,45 +1,33 @@
 # n00bSKILL
 
-`n00bSKILL` is a public home for random skills I make over time.
+`n00bSKILL` is a public collection of reusable AI agent skills.
 
 The name is half "noob skill" and half "noobs kill," which is exactly the right level of serious for this repo.
 
-## Download
+## How This Repo Is Organized
 
-If you are here to install the combined Humanizer + Danish skill in Claude, download:
+Each skill has its own folder under `skills/`. Treat each folder as the landing page for that skill: it contains the source `SKILL.md`, install instructions, attribution, and any packaged upload artifacts.
 
-[`packages/humanizer-danish.skill`](packages/humanizer-danish.skill)
+The root README stays intentionally small. It explains the repo and lists available skills. Go to a skill folder for installation details.
 
-That file is the uploadable Claude skill package. The `skills/humanizer-danish/` folder is the editable source version, not the file you upload.
+## Available Skills
 
-## Skills
+| Skill | What it does | Install path |
+| --- | --- | --- |
+| [`humanizer-danish`](skills/humanizer-danish/) | Combined Humanizer + Danish skill for Claude.ai Team/Enterprise organization provisioning, individual Claude.ai upload, Claude Code, and opencode. | Start on the skill landing page. |
+| [`humanizer-danish-addendum`](skills/humanizer-danish-addendum/) | Bolt-on Danish pass for people who already have the original Humanizer skill installed and want only the Danish-specific tells. | Start on the skill landing page. |
 
-- [`humanizer-danish-addendum`](skills/humanizer-danish-addendum/) — a discoverable bolt-on skill for humanizing Danish text with Humanizer-style agents. It complements the original [Humanizer skill by blader](https://github.com/blader/humanizer), catches Danish-specific AI tells, and includes instructions for using it alongside or merging it into an existing Humanizer skill.
-- [`humanizer-danish`](skills/humanizer-danish/) — source for the combined Humanizer + Danish skill intended for Claude.ai Team and Enterprise organization skill provisioning. Upload `packages/humanizer-danish.skill` from `Organization settings > Skills`.
+## Choosing a Skill
 
-## Claude Organization Skill Upload
+Use `humanizer-danish` if you want one complete installable skill. This is the normal choice for Claude.ai organization skills.
 
-Use this option when you want the combined Humanizer + Danish skill available to everyone in a Claude Team or Enterprise organization.
-
-Upload this file:
-
-```text
-packages/humanizer-danish.skill
-```
-
-Owner provisioning flow:
-
-1. Open `Organization settings > Skills` in Claude.
-2. Enable `Code execution and file creation` and `Skills` if they are not already enabled.
-3. In `Organization skills`, click `+ Add`.
-4. Upload `packages/humanizer-danish.skill`.
-
-The `.skill` file is a ZIP-format archive and includes `humanizer-danish/SKILL.md`.
+Use `humanizer-danish-addendum` if you already maintain a separate Humanizer skill and only want to add Danish-specific guidance.
 
 ## Layout
 
-- `skills/` is where skills will live.
-- `packages/` contains generated `.skill` upload artifacts for hosted Claude skill installs.
+- `skills/<skill-name>/README.md` is the public landing page for that skill.
+- `skills/<skill-name>/SKILL.md` is the source skill file.
+- `skills/<skill-name>/package/` contains upload-ready artifacts for that skill, when needed.
 
 ## License
 
