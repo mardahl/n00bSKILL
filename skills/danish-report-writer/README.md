@@ -4,6 +4,14 @@
 
 It is for students, workplace writers, and agents helping with Danish reports where the output must be useful to a defined reader rather than just sound academic.
 
+## Kort på dansk
+
+Brug `danish-report-writer`, når en dansk rapport skal have styr på `problemformulering`, `synopsis`, kilder, analyse, konklusion og formalia, før sproget bliver pudset af.
+
+Den hjælper agenten med at stoppe op, før den bare skriver en pæn rapport om "noget med ...". Først skal læser, formål, krav, kilder og det egentlige spørgsmål være på plads.
+
+Når rapporten hænger sammen fagligt, så kør gerne en sidste sprogpassage med [`humanizer-danish-addendum`](../humanizer-danish-addendum/). Den er bedre til den danske finish: stiv ChatGPT-dansk, oversatte engelske vendinger, konsulentsprog og den lidt for polerede tone.
+
 ## What To Install
 
 Install the source skill folder:

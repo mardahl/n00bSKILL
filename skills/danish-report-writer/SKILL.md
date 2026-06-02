@@ -1,24 +1,25 @@
 ---
 name: danish-report-writer
-description: Use when planning, drafting, revising, or reviewing Danish reports, especially for problemformulering, synopsis, kilder, kildehenvisninger, rapportsprog, serviceafsnit, or educational and workplace formalia.
+description: Use when planning, drafting, revising, or reviewing Danish reports, including requests like "lav en rapport", "skriv en rapport", "write me a report in Danish", problemformulering, synopsis, kilder, kildehenvisninger, rapportsprog, serviceafsnit, or educational and workplace formalia.
 license: MIT
 compatibility: claude-code opencode
 ---
 
-# Danish Report Writer
+# Danish report writer
 
 ## Overview
 
-Use this skill for Danish report work: planning, drafting, revising, or auditing reports in educational or workplace contexts.
+Use this skill when an agent helps with a Danish report: planning it, drafting it, revising it, or checking whether it is ready to hand in.
 
-Core principle: A Danish `rapport` is a `faglig`, `saglig`, reader-usable answer to a defined question. Do not draft before the audience, purpose, local requirements, `problemformulering`, and source basis are clear.
+A Danish `rapport` is a `faglig`, `saglig` answer to a real question. It should help a specific reader use the material. Do not draft the report before the audience, purpose, local rules, `problemformulering`, and source basis are clear.
 
 Primary source: Per Salling's 12-part Omatskrive.dk series `Skriv bedre rapporter!`. See `report-writing-source-notes.md` for article-by-article source notes.
 
-## When To Use
+## When to use
 
-Use for Danish tasks involving:
+Use it for Danish work involving:
 
+- User prompts such as `lav en rapport`, `skriv en rapport`, `skriv en dansk rapport`, `write me a report in Danish`, `help me with a Danish report`, `ret min rapport`, `lav en problemformulering`, or `hjælp med synopsis`.
 - Report planning, `synopsis`, `problemformulering`, `hypotese`, `afgrænsning`, or method.
 - Drafting or revising Danish report sections.
 - Source selection, `kildekritik`, `kildehenvisninger`, `kildefortegnelse`, or appendices.
@@ -28,9 +29,52 @@ Use for Danish tasks involving:
 
 Do not use for ordinary emails, blog posts, essays, fiction, or non-Danish report conventions unless the user explicitly asks to adapt this Danish model.
 
-## Hard Gates
+## Start by choosing mode
 
-Before drafting full report prose, establish:
+When the user asks for a Danish report without specifying the work mode, ask them to choose before doing report work:
+
+1. `Guided intake`: best when the user only has a subject. Ask required elements one at a time.
+2. `Fast assumptions`: best when the user needs speed. Draft visible assumptions for all required elements and ask the user to approve or correct them.
+3. `Existing report audit`: best when the user already has text. Audit gaps before rewriting.
+
+If the prompt clearly includes an existing report or asks to fix one, use `Existing report audit` and ask for the report text if it is missing. If the user explicitly asks for speed, use `Fast assumptions`. Otherwise, ask mode first.
+
+## Help the blank user choose
+
+When a required element is missing, do not ask a blank open question. Give exactly three context-aware suggestions plus a custom option.
+
+Use this format:
+
+```text
+Målgruppe:
+A. [suggestion based on what is already known]
+B. [different plausible suggestion]
+C. [different plausible suggestion]
+D. Skriv selv
+```
+
+Base suggestions on the subject, user wording, education/work context, existing notes, uploaded report text, or likely reader. Do not invent source facts. If you lack context, make the suggestions broad but useful.
+
+Use three suggestions plus `Skriv selv` for these elements when they are missing or weak:
+
+- `Afsender`
+- `Målgruppe`
+- `Formål`
+- Context or institution
+- `Formalia`
+- Report type
+- `Problemformulering`
+- `Hypotese` when relevant
+- `Afgrænsning`
+- Source basis
+- Citation style
+- Required `serviceafsnit`
+
+In `Guided intake`, ask about one element at a time. In `Fast assumptions`, show a compact assumption sheet with three alternatives for the uncertain elements and ask for approval. In `Existing report audit`, first show what is missing or weak, then offer three fixes for each important gap.
+
+## Before you draft
+
+Before writing full report prose, establish:
 
 - `Afsender`: who is writing or speaking?
 - `Målgruppe`: who must use the report?
@@ -41,9 +85,9 @@ Before drafting full report prose, establish:
 - `Problemformulering`: the exact question the report answers.
 - Source basis: what data, sources, observations, interviews, or empirical material can support the report?
 
-If any gate is missing and consequential, ask one focused question before drafting. If the user insists on speed, state assumptions explicitly and keep them visible.
+If one of these is missing and matters for the job, ask one focused question before drafting. If the user insists on speed, state your assumptions visibly.
 
-## Red Flags
+## Stop and fix first
 
 Stop and repair the plan if you notice:
 
@@ -56,19 +100,19 @@ Stop and repair the plan if you notice:
 - A repaired conclusion invents causes, findings, or recommendations not supported by the report's actual sources, data, or analysis.
 - Appendices are included to show effort rather than help the reader.
 
-## Quick Reference
+## Quick reference
 
 | Need | Use |
 | --- | --- |
-| Start a report | Hard gates, then 9-part `synopsis` |
+| Start a report | Pre-draft checks, then 9-part `synopsis` |
 | Narrow a broad topic | `emne` -> problem -> affected audience -> `problemformulering` -> `afgrænsning` |
 | Build main body | `indledning`, `analyseafsnit`, `konklusion` |
 | Structure analysis | `redegørelse` -> `undersøgelse` -> `diskussion` |
 | Fix weak conclusion | Compare `problemformulering` and `konklusion` side by side |
 | Fix weak sources | Classify material, run `kildekritik`, add claim-level references |
-| Finalize report | Audit citations, `kildefortegnelse`, and `serviceafsnit` |
+| Finish a report | Audit citations, `kildefortegnelse`, and `serviceafsnit` |
 
-## Workflow
+## Working order
 
 1. Intake `formalia` and reader context.
 2. Narrow the topic from broad `emne` to focused `afgrænsning`.
@@ -77,12 +121,12 @@ Stop and repair the plan if you notice:
 5. Build a 9-part `synopsis` in complete sentences.
 6. Plan `kilder og data`; classify material as `selve stoffet`, `nødvendig baggrundsviden`, or irrelevant.
 7. Draft `hovedafsnit`: `indledning`, `analyseafsnit`, `konklusion`.
-8. Revise `rapportsprog` for clear Danish, appropriate `fagsprog`, active responsibility, and lower unnecessary abstraction.
+8. Revise `rapportsprog`: clear Danish, useful `fagsprog`, named responsibility, and no unnecessary abstraction.
 9. Audit `kildehenvisninger` and `kildefortegnelse`.
 10. Add and audit `serviceafsnit`.
 11. Compare `problemformulering` and `konklusion` side by side. If the conclusion does not answer the question, the report is not done.
 
-## 9-Part Synopsis Template
+## 9-part synopsis template
 
 Use this before drafting. Each point should be 1-3 complete sentences, not keywords.
 
@@ -98,7 +142,7 @@ Use this before drafting. Each point should be 1-3 complete sentences, not keywo
 
 Do not copy this future-looking method text directly into the final report. The final `metodeafsnit` says what was actually done.
 
-## Main Sections
+## Main sections
 
 `Indledning` should move from broad `emneområde` to concrete problem field, focused scope, `problemformulering`, `afgrænsning`, method, audience, and purpose.
 
@@ -110,7 +154,7 @@ Add `metodekritik` or `perspektivering` only when it genuinely helps the reader 
 
 ## Skriveproces
 
-Keep drafting and polishing separate:
+Keep drafting and polishing apart:
 
 1. Write raw `indhold`: facts, data, observations, arguments, and source points.
 2. Reorder the material before polishing sentences.
@@ -118,9 +162,9 @@ Keep drafting and polishing separate:
 4. Rewrite into coherent Danish only after content and order are stable.
 5. Correct spelling, commas, punctuation, formatting, and references at the end.
 
-Do not make the first draft sound finished. A polished but unfocused report is harder to repair than a rough, well-structured one.
+Do not make the first draft sound finished. A shiny but unfocused report is harder to repair than a rough, well-structured one.
 
-## Source Rules
+## Source rules
 
 - Google, image search, and chatbots are discovery tools, not sources.
 - Every external factual claim, quote, graph, figure, dataset, interview, web page, PDF, broadcast, or observation needs a traceable source.
@@ -130,7 +174,7 @@ Do not make the first draft sound finished. A polished but unfocused report is h
 - Cut interesting material outside the `afgrænsning`.
 - Explain what each source contributes alone and in relation to the other material.
 
-## Rapportsprog Pass
+## Rapportsprog pass
 
 - Write for the defined `målgruppe`, not for everyone.
 - Use `fagsprog` only when the reader can use it.
@@ -141,7 +185,7 @@ Do not make the first draft sound finished. A polished but unfocused report is h
 
 Useful test: imagine explaining the point by phone to a `fagfælle` you do not personally know. The report prose should preserve that clear professional voice.
 
-## Serviceafsnit Audit
+## Serviceafsnit audit
 
 Check which support sections are required by local rules and report length:
 
@@ -154,9 +198,9 @@ Check which support sections are required by local rules and report length:
 - `Bilag`
 - `Bilagsfortegnelse` when appendices are numerous
 
-`Serviceafsnit` are the report's `brugsanvisning`, not decoration. Remove unreferenced `bilag`. Keep table-of-contents depth proportional to report length.
+`Serviceafsnit` are the report's `brugsanvisning`, not decoration. Remove unreferenced `bilag`. Match table-of-contents depth to report length.
 
-## Common Mistakes
+## Common mistakes
 
 | Mistake | Fix |
 | --- | --- |
@@ -169,9 +213,9 @@ Check which support sections are required by local rules and report length:
 | Conclusion repair invents evidence | Use placeholders and request the missing analysis, source, or interview support |
 | Inflated academic Danish | Use clear, active, audience-aware Danish |
 
-## Output Expectations
+## What to return
 
-When helping with a report, provide the artifact requested and briefly state:
+When helping with a report, give the requested artifact and briefly state:
 
 - Which assumptions were made because user information was missing.
 - Which report stage was handled: planning, synopsis, drafting, revision, citation audit, or service-section audit.

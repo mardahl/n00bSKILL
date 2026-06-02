@@ -46,6 +46,9 @@ Observed failure pattern: repair pressure can lead to symptom patching unless th
 
 The skill must make agents:
 
+- Trigger on Danish and English report prompts such as `lav en rapport`, `skriv en rapport`, and `write me a report in Danish`.
+- Ask the user to choose `Guided intake`, `Fast assumptions`, or `Existing report audit` when the mode is not clear.
+- Offer exactly three context-aware suggestions plus `Skriv selv` for each missing required element.
 - Ask for or visibly assume local `formalia` before drafting full prose.
 - Establish `afsender`, `målgruppe`, `formål`, report type, `problemformulering`, and source basis.
 - Use the 9-part `synopsis` when planning is missing.
@@ -54,3 +57,38 @@ The skill must make agents:
 - Require claim-level references plus `kildefortegnelse`.
 - Compare `problemformulering` and `konklusion` side by side.
 - Refuse to treat a topic summary as a finished conclusion.
+
+## REFACTOR Scenarios For Intake Modes
+
+### Scenario D: Danish "lav en rapport" Prompt
+
+Prompt: `Lav en rapport om AI i folkeskolen.`
+
+Baseline before refactor:
+
+- Agent asked only for formal requirements.
+- It did not ask the user to choose intake mode first.
+- It did not provide three suggestions plus a custom option for missing required elements.
+
+Expected after refactor:
+
+- Agent recognizes the prompt as a Danish report-writing trigger.
+- Agent asks the user to choose between `Guided intake`, `Fast assumptions`, and `Existing report audit` before report work.
+- If it starts `Guided intake`, it asks one required element at a time and gives exactly three suggestions plus `Skriv selv`.
+
+### Scenario E: Existing Report Without Text
+
+Prompt: `Her er min rapport om unges tillid til kommunen. Ret den og gør den bedre.`
+
+Baseline before refactor:
+
+- Agent switched loosely to revision mode and asked for the report text.
+- It did not ask mode first.
+- It did not provide three suggestions plus a custom option for missing or weak elements.
+
+Expected after refactor:
+
+- Agent selects or offers `Existing report audit`.
+- If the report text is missing, agent asks for it before rewriting.
+- Agent says the audit will check required elements first.
+- For missing or weak elements found during audit, agent offers three suggested fixes plus `Skriv selv`.
