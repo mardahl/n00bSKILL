@@ -2,8 +2,6 @@
 
 `n00bSKILL` is a public collection of reusable AI agent skills.
 
-The name is half "noob skill" and half "noobs kill," which is exactly the right level of serious for this repo.
-
 ## How This Repo Is Organized
 
 Each skill has its own folder under `skills/`. Treat each folder as the landing page for that skill: it contains the source `SKILL.md`, install instructions, attribution, and any packaged upload artifacts.
