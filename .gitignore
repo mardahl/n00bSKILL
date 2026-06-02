@@ -8,6 +8,8 @@
 *.swo
 
 # Local agent and assistant state
+AGENTS.md
+agents.md
 .opencode/
 .claude/
 .agents/
@@ -17,6 +19,7 @@ tmp/
 temp/
 scratch/
 transcripts/
+docs/
 *.log
 
 # Secrets and local environment
