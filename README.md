@@ -13,13 +13,7 @@ The root README stays intentionally small. It explains the repo and lists availa
 | Skill | What it does | Install path |
 | --- | --- | --- |
 | [`humanizer-danish`](skills/humanizer-danish/) | Combined Humanizer + Danish skill for Claude.ai Team/Enterprise organization provisioning, individual Claude.ai upload, Claude Code, and opencode. | Start on the skill landing page. |
-| [`humanizer-danish-addendum`](skills/humanizer-danish-addendum/) | Bolt-on Danish pass for people who already have the original Humanizer skill installed and want only the Danish-specific tells. | Start on the skill landing page. |
-
-## Choosing a Skill
-
-Use `humanizer-danish` if you want one complete installable skill. This is the normal choice for Claude.ai organization skills.
-
-Use `humanizer-danish-addendum` if you already maintain a separate Humanizer skill and only want to add Danish-specific guidance.
+| [`humanizer-danish-addendum`](skills/humanizer-danish-addendum/) | Danish-specific Humanizer addendum, with the ready-made combined `.skill` package mirrored for Claude Teams and simple installs. | Start on the skill landing page. |
 
 ## Layout
 

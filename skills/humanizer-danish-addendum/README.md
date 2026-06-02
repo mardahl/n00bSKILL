@@ -4,12 +4,21 @@
 
 The parent Humanizer skill catches structural patterns such as significance inflation, rule-of-three rhythm, generic positive conclusions, and promotional phrasing. This addendum covers Danish-specific tells: English idiom calques, translated syntax, Danish business filler, flat earnestness, low burstiness, and the risk of over-correcting legitimate Danish IT fagsprog.
 
+## Ready-Made Claude Package
+
+If you run Claude Team/Enterprise or just want one ready-made combined skill file, upload this package:
+
+[`package/humanizer-danish.skill`](package/humanizer-danish.skill)
+
+This is the complete `humanizer-danish` skill package. It includes the original Humanizer guidance plus this Danish addendum in one `.skill` upload file.
+
 Credit: this addendum is designed to complement the original [Humanizer skill by blader](https://github.com/blader/humanizer). The original Humanizer skill is based on Wikipedia's [Signs of AI writing](https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing) guide maintained by WikiProject AI Cleanup.
 
 ## Files
 
 - `SKILL.md`: standalone discoverable skill for opencode and Claude Code.
 - `README.md`: install, merge, and agent instructions.
+- `package/humanizer-danish.skill`: ready-made combined Claude upload package.
 
 ## Use as a Companion Skill
 
