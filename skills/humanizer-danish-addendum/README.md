@@ -1,5 +1,9 @@
 # Humanizer Danish addendum
 
+> **Deprecated. Use [`danisher`](../danisher/) instead.**
+>
+> `danisher` is standalone, so you no longer need the `humanizer` skill installed alongside it. It keeps every Danish rule from this addendum and adds a writing mode, Danish typography and number rules, address-form guidance, and citation conventions. This folder stays for anyone already running the addendum next to `humanizer`. Do not install both.
+
 A Danish add-on for the Humanizer skill.
 
 Use it when Danish AI text sounds translated, too polished, or weirdly corporate. It catches Danish-specific tells the English Humanizer rules miss: direct English idiom translations, English sentence rhythm, Danish business filler, flat ChatGPT enthusiasm, and over-correction of normal Danish IT language.
