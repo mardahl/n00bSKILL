@@ -6,6 +6,7 @@ Reusable AI agent skills.
 
 | Skill | What it does | Start here |
 | --- | --- | --- |
+| [`englisher`](skills/englisher/) | Writes and edits English copy that does not read like AI wrote it. Catches inflated claims, sales language, vague sources, formulaic rhythm, chatbot artifacts, and over-hedging. English counterpart to `danisher`. | Open the skill folder. |
 | [`danisher`](skills/danisher/) | Writes and edits Danish copy that does not read like translated English. Catches idiom calques, missing modalpartikler, særskrivning, English number and date format, and flat AI enthusiasm. | Open the skill folder. |
 | [`danish-report-writer`](skills/danish-report-writer/) | Danish report-writing workflow for `problemformulering`, `synopsis`, sources, citations, report language, and service sections. | Open the skill folder. |
 | [`humanizer-danish-addendum`](skills/humanizer-danish-addendum/) | Deprecated, superseded by [`danisher`](skills/danisher/). Danish cleanup rules that bolt onto the Humanizer skill. | Open the skill folder. |
