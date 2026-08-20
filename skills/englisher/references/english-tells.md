@@ -1,6 +1,6 @@
 # English tells: E1–E35 with worked examples
 
-Detection rules condensed from the [Humanizer skill by blader](https://github.com/blader/humanizer), itself based on [Wikipedia: Signs of AI writing](https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing) maintained by WikiProject AI Cleanup. Load when auditing or editing English text, or when a scanner check needs a worked example.
+Load when auditing or editing English text, or when a scanner check needs a worked example.
 
 AI prose has *specific* tells. Generic dryness without those tells is just dry writing — do not treat polish as proof.
 
@@ -94,7 +94,9 @@ One instance in isolation is not a tell. Clusters are.
 **After:**
 > Gallery 825 is LAAA's exhibition space for contemporary art. The gallery has four rooms totaling 3,000 square feet.
 
-### E9. Not X but Y and clipped negative endings
+### E9. Negative parallelism: not X but Y, and clipped negative endings
+
+**Phrases to watch:** it's not just X, it's Y; not merely X but Y; no X, no Y. A balanced antithesis across sentences — `Where the old system was rigid, the new one is flexible` — is the same rhythm at a larger scale.
 
 **Before:**
 > It's not just about the beat riding under the vocals; it's part of the aggression and atmosphere. It's not merely a song, it's a statement.
@@ -197,15 +199,9 @@ The final rewrite must not contain em dashes (—) or en dashes (–), unless th
 **After:**
 > The product launches in Q3. User research showed a preference for simplicity.
 
-### E19. Curly quotation marks
+### E19. Curly quotation marks (not a tell — see typography)
 
-**Before:**
-> He said “the project is on track” but others disagreed.
-
-**After:**
-> He said "the project is on track" but others disagreed.
-
-Note: macOS, Word, Google Docs and most CMSes auto-curl by default. Curly quotes count only when stacked with other tells.
+Curly quotes come from Word, macOS, Google Docs and most CMSes auto-curling human-typed text; LLM output is usually straight quotes. Presence alone is not evidence either way. Quote-style *consistency* is a typography issue: see `typography.md` and the false-positives list below.
 
 ## Chatbot artifacts
 
@@ -418,4 +414,3 @@ These details often carry the writer's voice. Keep them unless they hurt the mea
 - **Deliberate first-person choices.** Keep a cut or word choice when the writer can explain why it belongs.
 - **Variety in sentence length.** Real writing alternates short and long. AI writing tends toward an even, mid-length cadence.
 - **Genuine asides, parentheticals, or self-corrections.** "(I keep wanting to say 'almost' here, but it really was certain.)" Models rarely interrupt themselves like this.
-- **Edits made before November 30, 2022.** ChatGPT's public launch. Anything older is, with very rare exceptions, not AI-written.
