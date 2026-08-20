@@ -10,7 +10,7 @@ It is for anyone producing English text with an AI agent: marketers, consultants
 
 AI-written English is usually grammatically correct but carries stock patterns: inflated claims (`stands as a testament to`), sales language (`nestled`, `vibrant`, `boasts`), vague sources (`experts argue`), formulaic rhythm (groups of three, even mid-length sentences), chatbot artifacts (`I hope this helps!`), em dashes everywhere, and stacked qualifiers that make every claim sound uncertain.
 
-`englisher` fixes the patterns, not the writer's voice. It checks its own draft against a scanner before delivering, and it will not invent facts to make the copy better — when a needed fact is missing, it leaves a bracketed gap and tells you what to supply.
+`englisher` fixes the patterns, not the writer's voice. It checks its own draft against a scanner before delivering, and it will not invent facts to make the copy better: when a needed fact is missing, it leaves a bracketed gap and tells you what to supply.
 
 ## What to install
 
@@ -66,7 +66,7 @@ If you want the output to sound like you, paste a sample of your own writing and
 
 ## Relationship to other skills in this repo
 
-`englisher` is the English counterpart to [`danisher`](../danisher/). Same structure, same guarantees — mode routing, pre-emit scanner, no invented facts — with English AI-writing patterns instead of Danish ones. Use `danisher` for Danish output, `englisher` for English output.
+`englisher` is the English counterpart to [`danisher`](../danisher/). Same structure, same guarantees (mode routing, pre-emit scanner, no invented facts), with English AI-writing patterns instead of Danish ones. Use `danisher` for Danish output, `englisher` for English output.
 
 ## Attribution
 
