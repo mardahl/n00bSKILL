@@ -25,7 +25,7 @@ For opencode and Claude Code, install this folder as a source skill. See install
 ## Files
 
 - `SKILL.md`: the source skill for opencode and Claude Code
-- `references/english-tells.md`: E1–E35 with worked examples, false positives, human details to keep — loaded when auditing or editing English text
+- `references/english-tells.md`: E1–E37 with worked examples, false positives, human details to keep — loaded when auditing or editing English text
 - `references/voice.md`: writer's-voice matching, register table, personality guidance, WRITE-mode intake — loaded when composing new English from a brief
 - `references/typography.md`: typography and number-format table — loaded when the pre-emit scanner flags dashes, quotes, numbers, dates, currency or punctuation consistency
 - `README.md`: this landing page

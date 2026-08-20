@@ -1,4 +1,4 @@
-# English tells: E1–E35 with worked examples
+# English tells: E1–E37 with worked examples
 
 Load when auditing or editing English text, or when a scanner check needs a worked example.
 
@@ -38,12 +38,16 @@ Keep a citation when it explains what the person said and where. Do not invent c
 **After:**
 > The temple is painted blue, green, and gold, colors meant to evoke Texas bluebonnets and the Gulf of Mexico.
 
-### E4. Sales language
+### E4. Sales language and brochure puffery
 
-**Words to watch:** boasts a, vibrant, rich (figurative), profound, enhancing its, showcasing, exemplifies, commitment to, nestled, in the heart of, groundbreaking (figurative), renowned, breathtaking, must-visit, stunning
+**Words to watch:** boasts a, vibrant, rich (figurative), profound, enhancing its, showcasing, exemplifies, commitment to, nestled, in the heart of, bustling hub, stands as a testament to, groundbreaking (figurative), renowned, breathtaking, must-visit, stunning
+
+**Fix:** Replace with grounded, unflattering specifics a real person would name when describing the place to a friend.
+
+**Test:** If the paragraph could be pasted into a travel blog unchanged, rewrite it.
 
 **Before:**
-> Nestled within the breathtaking region of Gonder in Ethiopia, Alamata Raya Kobo stands as a vibrant town with a rich cultural heritage and stunning natural beauty.
+> Nestled within the breathtaking region of Gonder in Ethiopia, Alamata Raya Kobo stands as a bustling hub with a rich cultural heritage and stunning natural beauty.
 
 **After:**
 > Alamata Raya Kobo is a town in the Gonder region of Ethiopia.
@@ -84,9 +88,11 @@ One instance in isolation is not a tell. Clusters are.
 **After:**
 > Somali cuisine also includes camel meat, which is considered a delicacy. Pasta dishes, introduced during Italian colonization, remain common, especially in the south.
 
-### E8. Avoiding is and are
+### E8. Avoiding is and are (verb inflation)
 
 **Words to watch:** serves as/stands as/marks/represents [a], boasts/features/offers [a]
+
+**Fix:** Test each against a simple "is" (or "has"); if nothing is lost, use the simple form. Reserve elevated verbs for moments that earn it.
 
 **Before:**
 > Gallery 825 serves as LAAA's exhibition space for contemporary art. The gallery features four separate spaces and boasts over 3,000 square feet.
@@ -96,7 +102,9 @@ One instance in isolation is not a tell. Clusters are.
 
 ### E9. Negative parallelism: not X but Y, and clipped negative endings
 
-**Phrases to watch:** it's not just X, it's Y; not merely X but Y; no X, no Y. A balanced antithesis across sentences — `Where the old system was rigid, the new one is flexible` — is the same rhythm at a larger scale.
+**Phrases to watch:** it's not just X, it's Y; not merely X but Y; not just [tired], but [haunted]; no X, no Y. A balanced antithesis across sentences — `Where the old system was rigid, the new one is flexible` — is the same shortcut to sound profound at a larger scale.
+
+**Fix:** Flag repeat use; state plainly what the thing is. Allow rarely, only at genuinely pivotal moments.
 
 **Before:**
 > It's not just about the beat riding under the vocals; it's part of the aggression and atmosphere. It's not merely a song, it's a statement.
@@ -110,7 +118,11 @@ One instance in isolation is not a tell. Clusters are.
 **After:**
 > The options come from the selected item without forcing the user to guess.
 
-### E10. Forced groups of three
+### E10. Forced groups of three (mechanical rule-of-three)
+
+**Phrases to watch:** Near-every list forced into triads ("cold, quiet, and unforgiving"; "economically, socially, and culturally"; "innovation, inspiration, and industry insights").
+
+**Fix:** Vary list length and sentence rhythm; break up runs of three-part structures.
 
 **Before:**
 > The event features keynote sessions, panel discussions, and networking opportunities. Attendees can expect innovation, inspiration, and industry insights.
@@ -118,9 +130,11 @@ One instance in isolation is not a tell. Clusters are.
 **After:**
 > The event includes talks and panels. There's also time for informal networking between sessions.
 
-### E11. Synonym cycling and repeated sentence openings
+### E11. Synonym cycling (elegant variation) and repeated sentence openings
 
-Use one clear name for the same subject. For repeated openings, merge sentences, change the subject when that helps, or begin with the action.
+Use one clear name for the same subject across sentences and paragraphs. AI introduces synonym roulette (e.g. town → settlement → community → urban center) to avoid repeating a noun.
+
+**Fix:** Repeat the honest word that matches the narrator's voice; choose consistency over variety. For repeated openings, merge sentences, change the subject when that helps, or begin with the action.
 
 **Before (synonym cycling):**
 > The protagonist faces many challenges. The main character must overcome obstacles. The central figure eventually triumphs. The hero returns home.
@@ -381,9 +395,37 @@ Remove only the unsupported defense. If it contains a real claim, state that cla
 
 One rejected option may be valid. Several short, unrelated rejections are a stronger sign. Ask what new information each sentence adds. If it only records an earlier edit, rewrite the paragraph around its main point.
 
+### E36. Metaphor overload
+
+Abstract feelings or poetic conceits glued mechanically to inanimate nouns.
+
+**Phrases to watch:** city breathing with [innovation/energy], tapestry of resilience, dance of [forces], symphony of [flavors/sounds], heartbeat of [the organization], beacon of [hope]
+
+**Fix:** Cut most metaphors. Keep only metaphors that reveal something concrete about scene or character.
+
+**Before:**
+> The city was breathing with innovation, wrapped in a vibrant tapestry of resilience and ambition.
+
+**After:**
+> The city built new transit lines and attracted several software firms after the factory closures.
+
+### E37. Over-explaining meaning (abstract gloss)
+
+A concrete moment followed by an abstract gloss on what it "says about" identity, memory, community, or the human condition, or closing summaries leaning on "overall" or "ultimately."
+
+**Words to watch:** speaks to, says something about, a reminder of our shared, reflection on the human condition, what it says about identity/memory, overall, ultimately, at the end of the day, in the final analysis
+
+**Fix:** End on the action, image, or dialogue. Delete the commentary and verify the passage still works without the abstract lesson.
+
+**Before:**
+> He locked the shop door and walked home in the rain. Ultimately, this quiet ritual speaks to the enduring resilience of the human condition and the universal search for belonging in an uncertain world.
+
+**After:**
+> He locked the shop door and walked home in the rain.
+
 ## False positives: what not to flag
 
-A person may use some of these patterns. Do not treat any item below as proof by itself:
+A person may use some of these patterns. Do not treat any item below as proof by itself. The target is density and co-occurrence, not zero occurrences. Humans use all of these patterns occasionally. Flag clusters and repetition, not isolated instances. Always preserve the author's voice: rewrite toward the writer's register, never toward a neutral average.
 
 - **Perfect grammar and consistent style.** Many writers are professionals or have been edited. Polish does not equal AI.
 - **Mixed casual and formal styles.** This can reflect the writer's field, age, or personal habits.

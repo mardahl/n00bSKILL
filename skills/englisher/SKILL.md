@@ -12,7 +12,7 @@ compatibility: claude-code opencode
 AI-written English carries stock AI patterns even when grammar is correct: inflated claims, sales language, vague sources, formulaic rhythm, chatbot artifacts. Fix the patterns, keep the writer's voice. Rewriting every dry or formal sentence as a tell is the most common over-correction and makes text worse.
 
 Load reference files on demand:
-- `references/english-tells.md` — E1–E35 with worked examples, false positives, human details to keep. Load when auditing or editing English text, or when a scanner check needs a worked example.
+- `references/english-tells.md` — E1–E37 with worked examples, false positives, human details to keep. Load when auditing or editing English text, or when a scanner check needs a worked example.
 - `references/voice.md` — writer's-voice matching, register table, personality guidance, WRITE-mode intake. Load when composing new English from a brief or matching a writing sample.
 - `references/typography.md` — typography and number-format table. Load when the scanner flags dashes, quotes, numbers, dates, currency or punctuation consistency.
 
@@ -50,22 +50,22 @@ Sentence-by-sentence translation produces nearly every tell in `references/engli
 
 ## Pre-emit scanner
 
-Run before delivering, in every mode. Each item passes or fails; fix every failure before emitting. Pattern references (E1–E35) point to worked examples in `references/english-tells.md`.
+Run before delivering, in every mode. Each item passes or fails; fix every failure before emitting. Pattern references (E1–E37) point to worked examples in `references/english-tells.md`.
 
 1. No em dashes, en dashes or ` -- ` (E14), unless the writer's sample uses them — then match the sample's rate. See `references/typography.md`.
 2. Quote style consistent (straight vs curly), apostrophe style matching, serial comma held, list punctuation consistent, number/unit notation held. See `references/typography.md`.
 3. No chatbot artifacts: greetings, closings, offers, knowledge-limit disclaimers, gap-fill guesses (E20–E22).
-4. No overused AI word clusters (E7). One instance passes; three in a paragraph fails.
-5. No `serves as` / `boasts` / `features` where `is` / `has` works (E8).
-6. No forced groups of three (E10) and no other formulaic rhythm: negative parallelism (`not X but Y`), repeated sentence openings (E9, E11).
+4. No overused AI word clusters (E7) or metaphor overload (E36). One instance passes; clusters fail.
+5. No verb inflation: avoiding simple is/are via `serves as` / `boasts` / `features` where `is` / `has` works (E8).
+6. No forced groups of three / mechanical triads (E10) and no other formulaic rhythm: negative parallelism (`not X but Y`, E9), repeated sentence openings or synonym roulette (E11).
 7. No bold mini-heading lists or gratuitous bold (E15–E16); sentence-case headings (E17); no decorative emoji (E18).
 8. No filler phrases or stacked qualifiers (E23–E24). Never remove the last qualification.
-9. No generic positive ending (E25).
+9. No generic positive ending or over-explaining abstract gloss (E25, E37).
 10. No answered-but-unraised objections and no rejected fake alternatives (E34–E35). Keep options that are real or attributed.
 11. Every number, name, date, quote and commitment traceable to input. Untraceable → replace with bracketed placeholder or delete.
 12. Modality, tense, quantifiers, negation scope unchanged from source or brief.
 13. Vague attribution still vague or marked `[source?]` — never replaced with an invented citation.
-14. False positives checked: polish, mixed register, single transition words, auto-curled quotes, lone em dashes, deliberate repetition are not tells by themselves. See the false-positives list in `references/english-tells.md`.
+14. Calibration and false positives checked: density and co-occurrence are the target, not zero occurrences. Flag clusters and repetition, not isolated instances. Polish, mixed register, single transition words, auto-curled quotes, lone em dashes, deliberate repetition are not tells by themselves. Preserve the author's voice. See the false-positives list in `references/english-tells.md`.
 
 ## EDIT mode: editing existing English text
 
