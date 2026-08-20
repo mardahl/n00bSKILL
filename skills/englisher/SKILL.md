@@ -16,6 +16,7 @@ Detection rules derive from the [Humanizer skill by blader](https://github.com/b
 Load reference files on demand:
 - `references/english-tells.md` — E1–E35 with worked examples, false positives, human details to keep. Load when auditing or editing English text, or when a scanner check needs a worked example.
 - `references/voice.md` — writer's-voice matching, register table, personality guidance, WRITE-mode intake. Load when composing new English from a brief or matching a writing sample.
+- `references/typography.md` — typography and number-format table. Load when the scanner flags dashes, quotes, numbers, dates, currency or punctuation consistency.
 
 ## Hard rule: never invent facts
 
@@ -53,18 +54,19 @@ Sentence-by-sentence translation produces nearly every tell in `references/engli
 
 Run before delivering, in every mode. Each item passes or fails; fix every failure before emitting. Pattern references (E1–E35) point to worked examples in `references/english-tells.md`.
 
-1. No em dashes, en dashes or ` -- ` (E14), unless the writer's sample uses them — then match the sample's rate.
-2. No chatbot artifacts: greetings, closings, offers, knowledge-limit disclaimers, gap-fill guesses (E20–E22).
-3. No overused AI word clusters (E7). One instance passes; three in a paragraph fails.
-4. No `serves as` / `boasts` / `features` where `is` / `has` works (E8).
-5. No forced groups of three (E10).
-6. No bold mini-heading lists or gratuitous bold (E15–E16); sentence-case headings (E17); no decorative emoji (E18).
-7. No filler phrases or stacked qualifiers (E23–E24). Never remove the last qualification.
-8. No generic positive ending (E25).
-9. Every number, name, date, quote and commitment traceable to input. Untraceable → replace with bracketed placeholder or delete.
-10. Modality, tense, quantifiers, negation scope unchanged from source or brief.
-11. Vague attribution still vague or marked `[source?]` — never replaced with an invented citation.
-12. False positives checked: polish, mixed register, single transition words, auto-curled quotes, lone em dashes, deliberate repetition are not tells by themselves. See the false-positives list in `references/english-tells.md`.
+1. No em dashes, en dashes or ` -- ` (E14), unless the writer's sample uses them — then match the sample's rate. See `references/typography.md`.
+2. Quote style consistent (straight vs curly), apostrophe style matching, serial comma held, list punctuation consistent, number/unit notation held. See `references/typography.md`.
+3. No chatbot artifacts: greetings, closings, offers, knowledge-limit disclaimers, gap-fill guesses (E20–E22).
+4. No overused AI word clusters (E7). One instance passes; three in a paragraph fails.
+5. No `serves as` / `boasts` / `features` where `is` / `has` works (E8).
+6. No forced groups of three (E10).
+7. No bold mini-heading lists or gratuitous bold (E15–E16); sentence-case headings (E17); no decorative emoji (E18).
+8. No filler phrases or stacked qualifiers (E23–E24). Never remove the last qualification.
+9. No generic positive ending (E25).
+10. Every number, name, date, quote and commitment traceable to input. Untraceable → replace with bracketed placeholder or delete.
+11. Modality, tense, quantifiers, negation scope unchanged from source or brief.
+12. Vague attribution still vague or marked `[source?]` — never replaced with an invented citation.
+13. False positives checked: polish, mixed register, single transition words, auto-curled quotes, lone em dashes, deliberate repetition are not tells by themselves. See the false-positives list in `references/english-tells.md`.
 
 ## EDIT mode: editing existing English text
 
