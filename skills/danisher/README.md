@@ -27,10 +27,13 @@ For opencode and Claude Code, install this folder as a source skill. See install
 ## Files
 
 - `SKILL.md`: the source skill for opencode and Claude Code
+- `references/registers.md`: intake, pre-flight, register table, kanal — loaded when composing new Danish from a brief
+- `references/danish-tells.md`: D1–D10 with worked examples — loaded when auditing or editing Danish text
+- `references/typography.md`: D8 typography and number table — loaded when the pre-emit scanner flags numbers, dates, currency or comma system
 - `README.md`: this landing page
 - `package/danisher.skill`: upload-ready Claude artifact
 
-Source versus artifact: `SKILL.md` is the source. The `.skill` file is a zip archive renamed with the `.skill` extension, containing `SKILL.md` and `README.md`. It is not a separate skill.
+Source versus artifact: `SKILL.md` plus `references/` is the source. The `.skill` file is a zip archive renamed with the `.skill` extension, containing `SKILL.md`, `references/` and `README.md`. It is not a separate skill.
 
 ## Install locations
 
@@ -61,7 +64,7 @@ The skill routes on what you give it:
 
 Before writing from a brief it asks who you are writing to, what kind of text it is, and what the text should achieve. Each comes with a fixed set of options, so it takes one reply. It skips any question the brief already answers. With pasted Danish or English source, it normally infers context from the text and asks one short clarification only when an ambiguity such as register or `du` versus `I` prevents a faithful rewrite.
 
-Every run ends with a self-audit in Danish: *"Hvad afslører stadig, at det her er AI-skrevet?"* The final version is revised against that answer, because the first draft always keeps tells the model cannot see while generating.
+Every run ends with a mechanical pre-emit scanner (em-dash, decimal comma, thousands separator, % consistency, weekday/month case, comma system, group-compound hyphens) followed by meaning-preservation checks (fact traceability, modality, register). The final version is revised against that scanner, because the first draft always keeps tells the model cannot see while generating.
 
 It will not invent facts to make the copy better. When a needed fact is missing, it leaves a bracketed gap and lists what you need to supply. That is deliberate: a thin honest draft beats a polished one with plausible invented details.
 
