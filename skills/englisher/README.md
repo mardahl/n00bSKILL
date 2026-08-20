@@ -25,10 +25,12 @@ For opencode and Claude Code, install this folder as a source skill. See install
 ## Files
 
 - `SKILL.md`: the source skill for opencode and Claude Code
+- `references/english-tells.md`: E1–E35 with worked examples, false positives, human details to keep — loaded when auditing or editing English text
+- `references/voice.md`: writer's-voice matching, register table, personality guidance, WRITE-mode intake — loaded when composing new English from a brief
 - `README.md`: this landing page
 - `package/englisher.skill`: upload-ready Claude artifact
 
-Source versus artifact: `SKILL.md` is the source. The `.skill` file is a zip archive renamed with the `.skill` extension, containing `SKILL.md` and `README.md`. It is not a separate skill.
+Source versus artifact: `SKILL.md` plus `references/` is the source. The `.skill` file is a zip archive renamed with the `.skill` extension, containing `SKILL.md`, `references/` and `README.md`. It is not a separate skill.
 
 ## Install locations
 
