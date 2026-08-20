@@ -55,7 +55,7 @@ Run before delivering, in every mode. Each item passes or fails; fix every failu
 1. No em dashes, en dashes or ` -- ` (E14), unless the writer's sample uses them — then match the sample's rate. See `references/typography.md`.
 2. Quote style consistent (straight vs curly), apostrophe style matching, serial comma held, list punctuation consistent, number/unit notation held. See `references/typography.md`.
 3. No chatbot artifacts: greetings, closings, offers, knowledge-limit disclaimers, gap-fill guesses (E20–E22).
-4. No overused AI word clusters (E7) or metaphor overload (E36). One instance passes; clusters fail.
+4. No overused AI word clusters (E7), metaphor overload (E36), or brochure/travel-guide puffery (E4). One instance passes; clusters fail.
 5. No verb inflation: avoiding simple is/are via `serves as` / `boasts` / `features` where `is` / `has` works (E8).
 6. No forced groups of three / mechanical triads (E10) and no other formulaic rhythm: negative parallelism (`not X but Y`, E9), repeated sentence openings or synonym roulette (E11).
 7. No bold mini-heading lists or gratuitous bold (E15–E16); sentence-case headings (E17); no decorative emoji (E18).
