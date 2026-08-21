@@ -12,7 +12,7 @@ AI-skrevet dansk bærer ofte spor af engelsk syntaks, engelske vendinger og enge
 
 `danisher` retter registret og rytmen, ikke fagsproget. Den fanger direkte oversatte vendinger, manglende modalpartikler, særskrivning, engelsk talformat og den lidt for pæne ChatGPT-begejstring. Den lader være med at "danskgøre" almindelige engelske IT-termer, for det er dér, de fleste sprogrettelser gør teksten værre.
 
-Den kan både rette en tekst, du har, og skrive en ny fra et brief.
+Den kan både rette en tekst, du har, og skrive en ny fra en prompt.
 
 ## What to install
 
@@ -78,6 +78,4 @@ For longer Danish academic and workplace reports, use [`danish-report-writer`](.
 
 ## Attribution
 
-- Danish rules and worked examples originate in `humanizer-danish-addendum` in this repository
-- That addendum was built as a Danish companion to the [Humanizer skill by blader](https://github.com/blader/humanizer)
-- The universal-pattern table is condensed from [Wikipedia: Signs of AI writing](https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing), maintained by WikiProject AI Cleanup
+- Danish rules and worked examples are rebuilt and honed against [Dansk Sprognævn](https://dsn.dk) and other official Danish language sources
