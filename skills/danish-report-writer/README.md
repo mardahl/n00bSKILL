@@ -10,7 +10,7 @@ Brug `danish-report-writer`, når en dansk rapport skal have styr på `problemfo
 
 Den hjælper agenten med at stoppe op, før den bare skriver en pæn rapport om "noget med ...". Først skal læser, formål, krav, kilder og det egentlige spørgsmål være på plads.
 
-Når rapporten hænger sammen fagligt, så kør gerne en sidste sprogpassage med [`humanizer-danish-addendum`](../humanizer-danish-addendum/). Den er bedre til den danske finish: stiv ChatGPT-dansk, oversatte engelske vendinger, konsulentsprog og den lidt for polerede tone.
+Når rapporten hænger sammen fagligt, så kør gerne en sidste sprogpassage med [`danisher`](../danisher/). Den er bedre til den danske finish: stiv ChatGPT-dansk, oversatte engelske vendinger, konsulentsprog og den lidt for polerede tone.
 
 ## What To Install
 
@@ -26,10 +26,16 @@ Upload it in Claude Team/Enterprise under organization skills, then enable the s
 
 ## Files
 
-- `SKILL.md`: installable source skill for opencode and Claude Code.
-- `report-writing-source-notes.md`: paraphrased source notes from Omatskrive.dk's 12-part report-writing series.
-- `README.md`: this landing page.
-- `package/danish-report-writer.skill`: upload-ready Claude artifact.
+- `SKILL.md`: the source skill — overview, routing to reference files, working order, stop-and-fix triggers
+- `references/intake-and-modes.md`: work modes (`Guided intake`, `Fast assumptions`, `Existing report audit`), required pre-draft elements, 3-suggestion intake prompts
+- `references/synopsis-and-problemformulering.md`: narrowing `emne` → `problemformulering`, hypothesis rules, the 9-part synopsis template
+- `references/main-sections.md`: `indledning`, `analyseafsnit`, `konklusion` as a question-answer system
+- `references/sources-and-citations.md`: material classification, `kildekritik`, claim-level references, `kildefortegnelse`
+- `references/rapportsprog-and-process.md`: phased `skriveproces`, `rapportsprog`/`fagsprog` revision pass
+- `references/serviceafsnit-audit.md`: support sections as the report's `brugsanvisning`
+- `references/source-notes.md`: paraphrased article-by-article source notes from Omatskrive.dk's 12-part report-writing series (attribution and maintainer reference, not needed for normal report work)
+- `README.md`: this landing page
+- `package/danish-report-writer.skill`: upload-ready Claude artifact
 
 ## Install Locations
 
@@ -50,8 +56,8 @@ Restart the agent application after installing.
 
 ## Source Versus Package
 
-`SKILL.md` is the source skill file. `report-writing-source-notes.md` is supporting reference material. The `.skill` file in `package/` is a zip archive renamed with the `.skill` extension for upload, not a separate skill folder.
+`SKILL.md` plus `references/` is the source. The `.skill` file in `package/` is a zip archive renamed with the `.skill` extension for upload, not a separate skill folder.
 
 ## Attribution
 
-This skill is based primarily on Per Salling's `Skriv bedre rapporter!` article series on [Omatskrive.dk](https://www.omatskrive.dk/rapportteknik/skriv-bedre-rapporter-serie/). Source notes are paraphrased and linked in `report-writing-source-notes.md`.
+This skill is based primarily on Per Salling's `Skriv bedre rapporter!` article series on [Omatskrive.dk](https://www.omatskrive.dk/rapportteknik/skriv-bedre-rapporter-serie/). Source notes are paraphrased and linked in `references/source-notes.md`.
