@@ -1,0 +1,9 @@
+# Rewriting embedded references (links, images, web-part JSON)
+
+Post-migration link fixup has to recognize many URL shapes; several look nothing like a plain file URL and each fails differently if mishandled.
+
+- **Sharing links come in `/:x:/s/` and `/:x:/r/` forms.** `/s/` is an opaque token — resolvable only via Graph `/shares/{token}/driveItem`. `/r/` ("copy link") carries the literal server-relative path in the URL; resolve it directly (strip the `/:x:/r/` prefix) and never route it through Graph. Web-part JSON props (e.g. a Hero/CTA `button.linkUrl`) also store these **host-relative** (`/:b:/s/...`, no scheme or host) — a capture regex anchored to `https://host` misses them entirely.
+- **Graph `driveItem.webUrl` for Office files is not a path.** For `.docx/.xlsx/.pptx`, Graph returns the web-editor redirect `.../_layouts/15/Doc.aspx?sourcedoc={GUID}&file=...`. Treating that as the file path existence-checks `Doc.aspx` (always 404). Extract the `sourcedoc` GUID and resolve the real `ServerRelativeUrl` via SP REST `GetFileById('{guid}')` in the correct web's context.
+- **Bare web URLs vs file URLs.** Web-part JSON often stores the containing web's own URL (`.../SubsiteA`) as a separate property alongside the real file path. It is a *web* reference, not a file — don't run a file-existence check on it; match it against the known web list and map it directly.
+- **Built-in SharePoint assets are not content.** Paths under `/_layouts/<n>/images/` (e.g. `sitepagethumbnail.png`, the default page-thumbnail placeholder) ship identically on every tenant. Host-swap them; do not try to migrate or existence-check them.
+- **Fix shared resolution once, not per caller.** When many reference shapes funnel into one "resolve source URL → target URL" helper, add each new decode (Doc.aspx GUID, bare-web, stock image) *inside* that helper so every caller benefits — a smaller, root-cause fix than guarding each call site.

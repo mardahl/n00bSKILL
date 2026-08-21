@@ -11,6 +11,7 @@ Reusable AI agent skills.
 | [`danish-report-writer`](skills/danish-report-writer/) | Danish report-writing workflow for `problemformulering`, `synopsis`, sources, citations, report language, and service sections. | Open the skill folder. |
 | [`presentation-design`](skills/presentation-design/) | Presentation design workflow for slide structure, storytelling, visual hierarchy, Microsoft technical decks, and official icon sourcing. | Open the skill folder. |
 | [`self-contained-output`](skills/self-contained-output/) | Strips conversational bleed from standalone file deliverables, so scripts, READMEs, configs, and UI copy read as written for a stranger with zero chat context. | Open the skill folder. |
+| [`pnp-powershell-expert`](skills/pnp-powershell-expert/) | PnP.PowerShell against SharePoint Online: silent write failures, `ReadOnlyEnforced` fields, video thumbnails, playlist lists, `Invoke-PnPSPRestMethod` traps, subweb scope, SPFx deploys, link rewriting. | Open the skill folder. |
 
 ## Repo layout
 
