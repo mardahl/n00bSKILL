@@ -1,6 +1,6 @@
 ---
 name: pnp-powershell-expert
-description: Use when writing, debugging, or reviewing PnP.PowerShell automation against SharePoint Online — uploading files, reading/writing list items, migrating content, working with modern pages/web parts, video thumbnails, Graph calls via Invoke-PnPGraphMethod, or REST via Invoke-PnPSPRestMethod. Covers silent write failures, read-only-enforced fields, localized list names, connection/variable pitfalls, and cmdlet gotchas that produce misleading errors.
+description: Use when writing, debugging, or reviewing PnP.PowerShell automation against SharePoint Online — uploading files, reading/writing list items, migrating content, working with modern pages/web parts, video thumbnails, Graph calls via Invoke-PnPGraphMethod, REST via Invoke-PnPSPRestMethod, or tenant admin work (Get/Set-PnPTenantSite, OneDrive admin audit/repair, raw CSOM Tenant calls). Covers silent write failures, read-only-enforced fields, localized list names, connection/variable pitfalls, and cmdlet gotchas that produce misleading errors.
 ---
 
 # PnP.PowerShell (SharePoint Online)
@@ -42,6 +42,9 @@ PnP.PowerShell wraps three different SharePoint APIs (CSOM, SharePoint REST, Mic
 | Need sharing-link creation date; `Get-PnPSharingLink` has no such property | Graph `permission` object never exposes it; REST `GetSharingInformation` unreliable | CSOM `ObjectSharingInformation.GetListItemSharingInformation` — `reference/sharing-links.md` |
 | Role-assignment dump includes `SharingLinks.*` entries | Synthetic system entries, not real grantees | Filter `Title -like 'SharingLinks.*'` out — `reference/sharing-links.md` |
 | `Connect-PnPOnline` succeeds but every call 403s on a OneDrive site | Site is locked/deprovisioned (`LockState=NoAccess`); connect only acquires a token | Match 403 + `content type of the response is ""` — `reference/connections-scope.md` |
+| `$ctx.ExecuteQueryRetry()` fails with "does not contain a method named" | It's a PnP.Framework **extension method**, invisible from `.ps1` scope | Use `Invoke-PnPQuery` — `reference/tenant-admin-csom.md` |
+| `Set-PnPTenantSite -Owners` ran but the wrong account is still primary admin / old admins still present | It only ADDS an SCA; becomes primary only when no primary exists, never removes anyone | CSOM `SiteProperties.Owner` for primary, `Tenant.SetSiteAdmin(url,login,$false)` to remove — `reference/tenant-admin-csom.md` |
+| OneDrive owner derived from `/personal/<slug>` URL is wrong for every user (`user@domain.com` vs `first.last@domain.com` mismatch) | Slug is lossy: `.` and `@` both flatten to `_`; boundary local-part/domain is unrecoverable | Learn UPN domains from the tenant data, or forward-flatten candidates and compare — `reference/tenant-admin-csom.md` |
 
 ## Routing to reference files
 
@@ -55,6 +58,7 @@ PnP.PowerShell wraps three different SharePoint APIs (CSOM, SharePoint REST, Mic
 - `/s/` vs `/r/` sharing links, `Doc.aspx` redirects, stock images, bare web URLs → **`reference/link-rewriting.md`**
 - Retired PnP Management Shell client ID, `AppId` vs `AzureAppId`, Graph PATCH PSObject trap, app re-keying → **`reference/entra-app-registration.md`**
 - Sharing-link creation dates via CSOM, synthetic `SharingLinks.*` role assignments → **`reference/sharing-links.md`**
+- Raw CSOM from scripts (`ExecuteQueryRetry` extension-method trap), tenant admin API (primary vs SCA, add vs remove admin, `SetSiteAdmin`), OneDrive admin audit + slug/UPN mapping → **`reference/tenant-admin-csom.md`**
 
 ## Idempotency and re-runnable migrations
 
@@ -88,4 +92,7 @@ For scripts run repeatedly against an evolving source (until a cutover):
 - Expecting `Get-PnPSharingLink` or REST `GetSharingInformation` to expose a link's creation date — only CSOM `ObjectSharingInformation` does.
 - Treating `SharingLinks.*` role-assignment entries as real principals.
 - Assuming `Connect-PnPOnline` failing is how you detect a locked site — it succeeds; the first CSOM call fails.
+- Calling `$ctx.ExecuteQueryRetry()` from a `.ps1` — it's an extension method, not visible; use `Invoke-PnPQuery`.
+- Expecting `Set-PnPTenantSite -Owners` to fix a wrong primary admin or remove leftover admins — it only adds.
+- Reversing a OneDrive `/personal/<slug>` URL to a UPN by splitting at the first underscore — the slug is lossy; learn the tenant's UPN domains or forward-flatten candidates instead.
 - Fixing a bug in `src/` while the user re-tests a stale derived artifact (a `dist/` build, a copied script). After the fix, rebuild and tell the user exactly which file to launch.
