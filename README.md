@@ -23,6 +23,13 @@ Skills for AI agents. Most of them are about writing, in Danish and in English. 
 
 Each skill has its own version number and follows semantic versioning. The version is in the `metadata.version` field of the skill's `SKILL.md`, and the skill's README has a changelog. Each release is tagged `<skill-name>-v<version>`, for example `danisher-v1.2.0`.
 
+## Credits
+
+- The [Humanizer skill by blader](https://github.com/blader/humanizer) was the initial inspiration for the writing skills `danisher` and `englisher`.
+- [Wikipedia: Signs of AI writing](https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing), maintained by WikiProject AI Cleanup, is the source for the general AI-writing patterns both skills check for.
+
+Each skill's README lists any other credits for that skill.
+
 ## License
 
 MIT
