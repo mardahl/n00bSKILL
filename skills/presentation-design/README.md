@@ -23,6 +23,7 @@ Upload it in Claude Team/Enterprise under organization skills, then enable the s
 - `references/presentation-best-practices.md`: research notes behind the presentation rules.
 - `scripts/README.md`: usage notes for icon fetching.
 - `scripts/fetch_icon.py`: standard-library helper for fetching Microsoft and Azure icons.
+- `LICENSE.txt`: licence terms, a ready-made credit line and any third-party notices.
 - `package/presentation-design.skill`: upload-ready Claude artifact.
 
 ## Install Locations
@@ -48,8 +49,11 @@ Restart the agent application after installing.
 
 ## Changelog
 
+- **0.3.1-ms:** Licence changed from MIT to CC BY-SA 4.0 for the skill text (code stays MIT). Adds `LICENSE.txt` with the terms and a credit line; it is also inside the package. Versions released before this one stay MIT.
 - **0.3.0-ms:** First release with a changelog. The version number was already in use; the `-ms` suffix marks the Microsoft-enhanced variant. It now lives in `metadata.version` in `SKILL.md`.
 
 ## Attribution
 
 This skill is a Microsoft-enhanced version of the original MIT-licensed `Presentation Design` skill by Roland Huss from [`rhuss/cc-slidev`](https://github.com/rhuss/cc-slidev). The Microsoft presentation additions, icon helper, and packaging in this repository are maintained as part of `n00bSKILL`.
+
+Licence: skill text CC BY-SA 4.0, code MIT. See [`LICENSE.txt`](LICENSE.txt) for the terms and how to credit this skill.

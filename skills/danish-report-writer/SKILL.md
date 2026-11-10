@@ -1,10 +1,10 @@
 ---
 name: danish-report-writer
 description: Use when planning, drafting, revising, or reviewing Danish reports, including requests like "lav en rapport", "skriv en rapport", "write me a report in Danish", problemformulering, synopsis, kilder, kildehenvisninger, rapportsprog, serviceafsnit, or educational and workplace formalia.
-license: MIT
+license: CC-BY-SA-4.0
 compatibility: claude-code opencode
 metadata:
-  version: "1.0.0"
+  version: "1.0.1"
 ---
 
 # Danish report writer

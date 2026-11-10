@@ -44,10 +44,11 @@ For opencode and Claude Code, install this folder as a source skill. See install
 - `reference/link-rewriting.md`: post-migration embedded-reference rewriting
 - `reference/entra-app-registration.md`: retired PnP Management Shell client ID, Graph PATCH traps, app re-keying
 - `reference/sharing-links.md`: sharing-link creation dates via CSOM, `SharingLinks.*` filtering
+- `LICENSE.txt`: licence terms, a ready-made credit line and any third-party notices
 - `README.md`: this landing page
 - `package/pnp-powershell-expert.skill`: upload-ready Claude artifact
 
-Source versus artifact: `SKILL.md` plus `reference/` is the source. The `.skill` file is a zip archive renamed with the `.skill` extension, containing `SKILL.md`, `reference/` and `README.md`. It is not a separate skill.
+Source versus artifact: `SKILL.md` plus `reference/` is the source. The `.skill` file is a zip archive renamed with the `.skill` extension, containing `SKILL.md`, `reference/`, `README.md` and `LICENSE.txt`. It is not a separate skill.
 
 ## Install locations
 
@@ -68,8 +69,11 @@ Restart the agent application after installing.
 
 ## Changelog
 
+- **1.0.1:** Licence changed from MIT to CC BY-SA 4.0 for the skill text (code stays MIT). Adds `LICENSE.txt` with the terms and a credit line; it is also inside the package. Versions released before this one stay MIT.
 - **1.0.0:** First numbered release. Earlier changes were not versioned.
 
 ## Attribution
 
 Content distilled from real-world PnP.PowerShell migration and automation work against SharePoint Online tenants, contributed by the repository maintainer. Cmdlet behaviour references ground in the [PnP.PowerShell dev-branch docs and source](https://github.com/pnp/powershell).
+
+Licence: skill text CC BY-SA 4.0, code MIT. See [`LICENSE.txt`](LICENSE.txt) for the terms and how to credit this skill.

@@ -12,6 +12,13 @@ This repository is a public collection of reusable AI agent skills. Keep the str
 - Do not put skill-specific install artifacts in a repo-level `packages/` folder. That separates the download from the skill explanation and creates a confusing user journey.
 - Do not split one skill across multiple sibling folders unless one folder is explicitly a separate skill with a separate audience.
 
+## Licensing
+
+- Skill text (`SKILL.md`, reference files, READMEs, worked examples) is CC BY-SA 4.0 (`LICENSE`). Code (script files and code blocks in Markdown) is MIT (`LICENSE-MIT`).
+- Every skill folder has a `LICENSE.txt` with the copyright line, the CC BY-SA terms, a credit line and any third-party notices. Include it in the `.skill` package.
+- Set `license:` in the `SKILL.md` frontmatter: `CC-BY-SA-4.0`, or `CC-BY-SA-4.0 AND MIT` when the skill ships scripts or substantial code.
+- When a skill uses third-party material, credit it in the skill's README `## Attribution` and copy its licence notice into `LICENSE.txt`. Material under CC BY-SA, MIT or another CC BY-SA-compatible licence is fine. Do not copy text under a NonCommercial, NoDerivatives or unknown licence; paraphrase and link instead.
+
 ## Root README
 
 - Keep the root `README.md` focused on the repo's purpose and a catalog of available skills.

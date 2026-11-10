@@ -31,10 +31,11 @@ For opencode and Claude Code, install this folder as a source skill. See install
 - `references/danish-tells.md`: the Danish-specific patterns D1–D10, with worked examples. Loaded when auditing or editing Danish text.
 - `references/typography.md`: typography and number formats (D8). Loaded when the scanner flags dashes, numbers, dates, currency or commas.
 - `references/lokalisering.md`: locale mode for a reader in Denmark. Loaded when the input or draft has American or other non-Danish conventions.
+- `LICENSE.txt`: licence terms, a ready-made credit line and any third-party notices
 - `README.md`: this landing page
 - `package/danisher.skill`: upload-ready Claude artifact
 
-Source versus artifact: `SKILL.md` plus `references/` is the source. The `.skill` file is a zip archive renamed with the `.skill` extension, containing `SKILL.md`, `references/` and `README.md`. It is not a separate skill.
+Source versus artifact: `SKILL.md` plus `references/` is the source. The `.skill` file is a zip archive renamed with the `.skill` extension, containing `SKILL.md`, `references/`, `README.md` and `LICENSE.txt`. It is not a separate skill.
 
 ## Install locations
 
@@ -82,6 +83,7 @@ For longer Danish academic and workplace reports, use [`danish-report-writer`](.
 
 ## Changelog
 
+- **1.3.1:** Licence changed from MIT to CC BY-SA 4.0 for the skill text. Adds `LICENSE.txt` with the terms and a credit line; it is also inside the package. Versions released before this one stay MIT.
 - **1.3.0:** Stops the skill from flattening your text. It no longer splits correct long sentences or swaps long words for short ones just to make a text easier to read. When you supply a writing sample, it checks the draft's sentence length and share of long words against the sample, and builds longer sentences from your facts plus bracketed gaps instead of invented claims. Reading effort now follows the text's purpose: plain for instructions and driftstekst, not smoothed out for persuasive text.
 - **1.2.0:** First numbered release. Earlier changes were not versioned. This release adds:
   - hyphen rules from Retskrivningsreglerne § 57: a hyphen for a left-out shared part (`drifts- og supportaftaler`), hyphens between equal-ranking parts (`dansk-tysk`, `kunde-leverandør-forholdet`), compounds with digits, symbols and spoken letters (`1990-tallet`, `A-kunder`), a hyphen only at the boundary (`e-mailadresse`, `ph.d.-studerende`), and proper names in group compounds (`New York-kontoret`)
@@ -92,3 +94,5 @@ For longer Danish academic and workplace reports, use [`danish-report-writer`](.
 
 - Danish rules and worked examples are rebuilt and honed against [Dansk Sprognævn](https://dsn.dk) and other official Danish language sources
 - The anti-flattening rules (1.3.0) draw on Ilyas, Tashk, Beier and Bækgaard, ["Reading the Readers Mind through Eye Tracking: Can AI Generated Texts Match Human Authors?"](https://dl.acm.org/doi/10.1145/3715669.3726846), ETRA 2025. In that study, Copilot imitations of Danish authors were simpler than the originals and were read more like skimming. The study had 12 readers, one model and literary texts, so the skill uses it as a reason for caution, not as a detection rule
+
+Licence: skill text CC BY-SA 4.0. See [`LICENSE.txt`](LICENSE.txt) for the terms and how to credit this skill.

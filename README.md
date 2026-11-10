@@ -32,4 +32,27 @@ Each skill's README lists any other credits for that skill.
 
 ## License
 
-MIT
+The skills are © 2026 Michael Mardahl and use two licences:
+
+- **Skill text** (`SKILL.md`, reference files, READMEs and worked examples) is licensed under [Creative Commons Attribution-ShareAlike 4.0](https://creativecommons.org/licenses/by-sa/4.0/) (CC BY-SA 4.0). The full text is in [`LICENSE`](LICENSE).
+- **Code** (script files such as `fetch_icon.py`, and code blocks inside the Markdown files) is licensed under MIT. The full text is in [`LICENSE-MIT`](LICENSE-MIT).
+
+Each skill folder has a `LICENSE.txt` with that skill's terms and any third-party notices. The file is also inside the `.skill` package.
+
+Releases tagged before this change were published under MIT and stay MIT for anyone who already has them.
+
+### How to credit
+
+You may use, change and republish the skills, including commercially, as long as you:
+
+1. Credit the author and link to the source.
+2. Say that you changed the skill, if you did.
+3. Publish your version under CC BY-SA 4.0 as well.
+
+A credit line that meets the first point:
+
+> Based on `<skill-name>` by Michael Mardahl, https://github.com/mardahl/n00bSKILL, licensed under CC BY-SA 4.0. Changes: `<what you changed>`.
+
+Republishing a skill, or an adapted version of one, as your own work without this credit breaks the licence.
+
+GitHub's **Cite this repository** button uses [`CITATION.cff`](CITATION.cff).

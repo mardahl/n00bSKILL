@@ -34,6 +34,7 @@ Upload it in Claude Team/Enterprise under organization skills, then enable the s
 - `references/rapportsprog-and-process.md`: phased `skriveproces`, `rapportsprog`/`fagsprog` revision pass
 - `references/serviceafsnit-audit.md`: support sections as the report's `brugsanvisning`
 - `references/source-notes.md`: paraphrased article-by-article source notes from Omatskrive.dk's 12-part report-writing series (attribution and maintainer reference, not needed for normal report work)
+- `LICENSE.txt`: licence terms, a ready-made credit line and any third-party notices
 - `README.md`: this landing page
 - `package/danish-report-writer.skill`: upload-ready Claude artifact
 
@@ -60,8 +61,11 @@ Restart the agent application after installing.
 
 ## Changelog
 
+- **1.0.1:** Licence changed from MIT to CC BY-SA 4.0 for the skill text. Adds `LICENSE.txt` with the terms and a credit line; it is also inside the package. Versions released before this one stay MIT.
 - **1.0.0:** First numbered release. Earlier changes were not versioned.
 
 ## Attribution
 
 This skill is based primarily on Per Salling's `Skriv bedre rapporter!` article series on [Omatskrive.dk](https://www.omatskrive.dk/rapportteknik/skriv-bedre-rapporter-serie/). Source notes are paraphrased and linked in `references/source-notes.md`.
+
+Licence: skill text CC BY-SA 4.0. See [`LICENSE.txt`](LICENSE.txt) for the terms and how to credit this skill.

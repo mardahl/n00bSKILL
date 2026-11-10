@@ -1,10 +1,10 @@
 ---
 name: danisher
 description: Use when composing or editing any deliverable containing Danish prose for an external reader — kundemails, tilbud, fakturanotater, aftaletekst, rapportafsnit, præsentationstekst, UI-tekst, nyhedsbreve — including when Danish is only one part of a larger technical artifact (a Danish appendix, quote, or email body inside English work). Trigger on "skriv på dansk", "skriv en mail til kunden", "skriv et tilbud", "ret min danske tekst", or any request whose output is Danish prose a customer, partner, myndighed or colleague will read. Do NOT trigger on Danish variable names, Danish tenant/domain strings, Danish legal clauses quoted verbatim as data, or Danish words quoted inside an English technical discussion.
-license: MIT
+license: CC-BY-SA-4.0
 compatibility: claude-code opencode
 metadata:
-  version: "1.3.0"
+  version: "1.3.1"
 ---
 
 # Danisher

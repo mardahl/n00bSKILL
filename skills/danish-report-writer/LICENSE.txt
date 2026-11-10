@@ -1,0 +1,34 @@
+danish-report-writer
+Copyright (c) 2026 Michael Mardahl
+Source: https://github.com/mardahl/n00bSKILL/tree/main/skills/danish-report-writer
+
+SKILL TEXT: CC BY-SA 4.0
+
+The text of this skill (SKILL.md, reference files, README and worked
+examples) is licensed under the Creative Commons Attribution-ShareAlike 4.0
+International License:
+https://creativecommons.org/licenses/by-sa/4.0/legalcode
+
+You may copy, change and republish it, including commercially, if you:
+  1. credit the author and link to the source,
+  2. say whether you changed it, and
+  3. publish your version under CC BY-SA 4.0.
+
+Credit line:
+  Based on danish-report-writer by Michael Mardahl, https://github.com/mardahl/n00bSKILL,
+  licensed under CC BY-SA 4.0. Changes: <what you changed>.
+
+Versions released before this licence change were published under MIT and
+stay MIT for anyone who already has them.
+
+Code blocks inside the Markdown files may also be used under the MIT
+License: https://github.com/mardahl/n00bSKILL/blob/main/LICENSE-MIT
+
+------------------------------------------------------------------------
+
+SOURCES
+
+The guidance paraphrases and links Per Salling's "Skriv bedre rapporter!"
+article series on Omatskrive.dk:
+https://www.omatskrive.dk/rapportteknik/skriv-bedre-rapporter-serie/
+No text from the series is reproduced. See references/source-notes.md.

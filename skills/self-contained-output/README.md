@@ -19,10 +19,11 @@ For opencode and Claude Code, install this folder as a source skill. See install
 ## Files
 
 - `SKILL.md`: the source skill for opencode and Claude Code
+- `LICENSE.txt`: licence terms, a ready-made credit line and any third-party notices
 - `README.md`: this landing page
 - `package/self-contained-output.skill`: upload-ready Claude artifact
 
-Source versus artifact: `SKILL.md` is the source. The `.skill` file is a zip archive renamed with the `.skill` extension, containing `SKILL.md` and `README.md`. It is not a separate skill.
+Source versus artifact: `SKILL.md` is the source. The `.skill` file is a zip archive renamed with the `.skill` extension, containing `SKILL.md`, `README.md` and `LICENSE.txt`. It is not a separate skill.
 
 ## Install locations
 
@@ -55,8 +56,11 @@ The skill ends with a pre-finalize self-check the agent runs on the artifact bef
 
 ## Changelog
 
+- **1.0.1:** Licence changed from MIT to CC BY-SA 4.0 for the skill text. Adds `LICENSE.txt` with the terms and a credit line; it is also inside the package. Versions released before this one stay MIT.
 - **1.0.0:** First numbered release. Earlier changes were not versioned.
 
 ## Attribution
 
 - Authored and maintained as part of `n00bSKILL`.
+
+Licence: skill text CC BY-SA 4.0. See [`LICENSE.txt`](LICENSE.txt) for the terms and how to credit this skill.

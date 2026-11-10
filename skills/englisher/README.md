@@ -28,10 +28,11 @@ For opencode and Claude Code, install this folder as a source skill. See install
 - `references/english-tells.md`: E1–E37 with worked examples, false positives, human details to keep — loaded when auditing or editing English text
 - `references/voice.md`: writer's-voice matching, register table, personality guidance, WRITE-mode intake — loaded when composing new English from a brief
 - `references/typography.md`: typography and number-format table — loaded when the pre-emit scanner flags dashes, quotes, numbers, dates, currency or punctuation consistency
+- `LICENSE.txt`: licence terms, a ready-made credit line and any third-party notices
 - `README.md`: this landing page
 - `package/englisher.skill`: upload-ready Claude artifact
 
-Source versus artifact: `SKILL.md` plus `references/` is the source. The `.skill` file is a zip archive renamed with the `.skill` extension, containing `SKILL.md`, `references/` and `README.md`. It is not a separate skill.
+Source versus artifact: `SKILL.md` plus `references/` is the source. The `.skill` file is a zip archive renamed with the `.skill` extension, containing `SKILL.md`, `references/`, `README.md` and `LICENSE.txt`. It is not a separate skill.
 
 ## Install locations
 
@@ -70,12 +71,15 @@ If you want the output to sound like you, paste a sample of your own writing and
 
 ## Changelog
 
+- **1.1.1:** Licence changed from MIT to CC BY-SA 4.0 for the skill text. Adds `LICENSE.txt` with the terms and a credit line; it is also inside the package. Versions released before this one stay MIT. CC BY-SA also matches the licence of the Wikipedia examples the skill quotes.
 - **1.1.0:** Stops the skill from flattening your text. It no longer splits correct long sentences or swaps long words for short ones just to make a text easier to read. When you supply a writing sample, it checks the draft's sentence length and share of long words against the sample, and builds longer sentences from your facts plus bracketed gaps instead of invented claims. Reading effort now follows the text's goal: plain for instructions and notices, not smoothed out for persuasive text.
 - **1.0.0:** First numbered release. Earlier changes were not versioned.
 
 ## Attribution
 
 - Detection rules and worked examples derive from the [Humanizer skill by blader](https://github.com/blader/humanizer) (MIT)
-- Humanizer's patterns come from [Wikipedia: Signs of AI writing](https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing), maintained by WikiProject AI Cleanup
+- Humanizer's patterns come from [Wikipedia: Signs of AI writing](https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing), maintained by WikiProject AI Cleanup and licensed under CC BY-SA 4.0. Several "Before" examples in `references/english-tells.md` are quoted or adapted from that page
 - Skill structure mirrors [`danisher`](../danisher/) in this repository
 - The anti-flattening rules (1.1.0) draw on Ilyas, Tashk, Beier and Bækgaard, ["Reading the Readers Mind through Eye Tracking: Can AI Generated Texts Match Human Authors?"](https://dl.acm.org/doi/10.1145/3715669.3726846), ETRA 2025. In that study, Copilot imitations of Danish authors were simpler than the originals and were read more like skimming. The study had 12 readers, one model and literary texts, so the skill uses it as a reason for caution, not as a detection rule
+
+Licence: skill text CC BY-SA 4.0. See [`LICENSE.txt`](LICENSE.txt) for the terms and how to credit this skill.
