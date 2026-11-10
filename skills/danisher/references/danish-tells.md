@@ -96,13 +96,18 @@ In brief-based SKRIV, use any such marker only when the brief explicitly support
 
 ## D7. Kompositum og bindestreg
 
-Keep five rules separate:
+The rules follow Retskrivningsreglerne § 57. A bindestreg never has spaces around it. Keep these rules separate:
 
 1. **Ordinary compounds:** Danish compounds, including established one-word loans, are written as one word: `sikkerheds opdateringer` → `sikkerhedsopdateringer`; `backupløsning`, `mailserver`, `cloudtjenester`, `weekendvagt`, `jobfunktion`, `computerudstyr`.
-2. **Group compounds:** a multiword first element takes a boundary hyphen: `Conditional Access politikken` → `Conditional Access-politikken`; `Zero Trust arkitekturen` → `Zero Trust-arkitekturen`; `Microsoft 365-opsætning`.
-3. **Initial abbreviations:** an abbreviation normally takes a hyphen in a compound: `AI-selskab`. A pronounceable abbreviation written in lowercase or with only an initial capital may optionally omit it: `aids-patient`/`aidspatient`, `Nato-land`/`Natoland`. All capitals keep the hyphen: `NATO-land`.
-4. **One-word names and products:** an English proper name or product name does not require a hyphen merely because it is English. Ordinary compounding follows pronunciation; a clarity hyphen is optional when the join is hard to read. `Windows-enheder` and `Intune-policyen` use that clarity option.
-5. **Inflected abbreviations:** abbreviations written without a full stop normally take an apostrophe before the ending: `SMV'er`, `API'er`, `KPI'erne`, `cd'en`. Ordinary loans do not: `policyen`, `policyer`, never `policy'en`.
+2. **Group compounds:** a multiword first element takes a boundary hyphen: `Conditional Access politikken` → `Conditional Access-politikken`; `Zero Trust arkitekturen` → `Zero Trust-arkitekturen`; `Microsoft 365-opsætning`. Outside proper names, hyphens between all the words are equally correct: `gør det selv-løsning` or `gør-det-selv-løsning`; `end to end kryptering` → `end-to-end-kryptering`. Proper names take only the boundary hyphen: `New-York-kontoret` → `New York-kontoret`.
+3. **Abbreviations, digits, symbols and spoken letters:** these take a hyphen in a compound: `AI-selskab`, `NATO-øvelse`, `vm-kamp`, `ph.d.-studerende`, `1990-tallet`, `%-sats`, `A-kunder`, `T-shirt`. A pronounceable abbreviation written in lowercase or with only an initial capital may optionally omit it: `aids-patient`/`aidspatient`, `Nato-land`/`Natoland`. All capitals keep the hyphen: `NATO-land`.
+4. **Hyphen at the boundary only:** the hyphen separates the abbreviation, number or letter from the rest; everything after it follows rule 1. `e-mail-adresse` → `e-mailadresse`; `2.-grads-ligning` → `2.-gradsligning`; `myldretids-S-tog`.
+5. **Coordinate parts:** equal-ranking parts are joined by a hyphen: `dansk tysk samarbejde` → `dansk-tysk samarbejde`; `Lolland-Falster`. As the first element of a compound, the whole chain is hyphenated: `kunde leverandør forholdet` → `kunde-leverandør-forholdet`.
+6. **Shared part left out:** when coordinated compounds share a part, the hyphen marks the gap: `drifts og supportaftaler` → `drifts- og supportaftaler`; `A- og B-kunder`; `driftsopdateringer og -meddelelser`. This is correct, not særskrivning. Never remove that hyphen or merge the words.
+7. **Names and readability:** an English proper name or product name does not require a hyphen merely because it is English. Ordinary compounding follows pronunciation; a clarity hyphen is optional when the join is unusual or hard to read: `Windows-enheder`, `Intune-policyen`, `gløgg-gilde`, `ikke-angrebspagt`.
+8. **Inflected abbreviations:** abbreviations written without a full stop normally take an apostrophe before the ending: `SMV'er`, `API'er`, `KPI'erne`, `cd'en`. Ordinary loans do not: `policyen`, `policyer`, never `policy'en`.
+
+Where two forms are both correct (rules 2, 3 and 7), REDIGER keeps the source's form. Do not insert hyphens for line breaks; word division belongs to the layout. Functional strings such as `--force` keep their characters.
 
 Danish trade press writes `tredjepartsopdatering`, `krypteringsnøgle`, `Windows-enheder`, `AI-selskab`, `backupløsning`.
 

@@ -4,13 +4,13 @@
 
 Use it for marketing text, kundemails, LinkedIn-opslag, nyhedsbreve, UI-tekst, rapporter and documentation, in either direction: paste Danish text and it cleans it up, or give it a brief and it writes the Danish from scratch. Give it English source material and it writes Danish from the meaning instead of translating sentence by sentence.
 
-It is for anyone producing Danish text with an AI agent: marketers, consultants, IT folks writing customer-facing documentation, and students. It is Danish only. There is no English mode.
+It is for anyone producing Danish text with an AI agent: marketers, consultants, IT folks writing customer-facing documentation, and students. It is Danish only. For English, use [`englisher`](../englisher/).
 
 ## Kort på dansk
 
 AI-skrevet dansk bærer ofte spor af engelsk syntaks, engelske vendinger og engelsk rytme. Resultatet kan være grammatisk korrekt dansk, som stadig lyder oversat.
 
-`danisher` retter registret og rytmen, ikke fagsproget. Den fanger direkte oversatte vendinger, manglende modalpartikler, særskrivning, engelsk talformat og den lidt for pæne ChatGPT-begejstring. Den lader være med at "danskgøre" almindelige engelske IT-termer, for det er dér, de fleste sprogrettelser gør teksten værre.
+`danisher` retter registret og rytmen, ikke fagsproget. Den fanger direkte oversatte vendinger, manglende modalpartikler, særskrivning, forkerte bindestreger, engelsk talformat og den lidt for pæne ChatGPT-begejstring. Den lader være med at "danskgøre" almindelige engelske IT-termer, for det er dér, de fleste sprogrettelser gør teksten værre.
 
 Den kan både rette en tekst, du har, og skrive en ny fra en prompt.
 
@@ -27,9 +27,10 @@ For opencode and Claude Code, install this folder as a source skill. See install
 ## Files
 
 - `SKILL.md`: the source skill for opencode and Claude Code
-- `references/registers.md`: intake, pre-flight, register table, kanal — loaded when composing new Danish from a brief
-- `references/danish-tells.md`: D1–D10 with worked examples — loaded when auditing or editing Danish text
-- `references/typography.md`: D8 typography and number table — loaded when the pre-emit scanner flags numbers, dates, currency or comma system
+- `references/registers.md`: intake questions, pre-flight checks, register table and channel defaults. Loaded when writing new Danish from a brief.
+- `references/danish-tells.md`: the Danish-specific patterns D1–D10, with worked examples. Loaded when auditing or editing Danish text.
+- `references/typography.md`: typography and number formats (D8). Loaded when the scanner flags dashes, numbers, dates, currency or commas.
+- `references/lokalisering.md`: locale mode for a reader in Denmark. Loaded when the input or draft has American or other non-Danish conventions.
 - `README.md`: this landing page
 - `package/danisher.skill`: upload-ready Claude artifact
 
@@ -59,12 +60,15 @@ The skill routes on what you give it:
 | You give it | It does |
 | --- | --- |
 | Danish text | Rewrites it, audits its own draft, delivers a final version |
-| A brief or bullet points | Asks up to three intake questions, then writes Danish copy that never had the tells |
+| A brief or bullet points | Asks up to three intake questions, then writes Danish copy that reads as if a Dane wrote it |
 | English text and "på dansk" | Writes Danish from the meaning, not sentence by sentence |
+| Anything with American or other non-Danish conventions (dollars, `11/28`, EST, ZIP codes, HIPAA, Thanksgiving, "thrilled to announce") | Localises for a reader in Denmark (`da-DK`) and lists every adaptation it made |
+
+Locale mode lives in `references/lokalisering.md` and is read only when the input or draft needs it. It converts formats and time zones, swaps in Danish equivalents and tones down American sales register. It never invents an exchange rate, a Danish price, Danish availability or a compliance claim; those become bracketed gaps.
 
 Before writing from a brief it asks who you are writing to, what kind of text it is, and what the text should achieve. Each comes with a fixed set of options, so it takes one reply. It skips any question the brief already answers. With pasted Danish or English source, it normally infers context from the text and asks one short clarification only when an ambiguity such as register or `du` versus `I` prevents a faithful rewrite.
 
-Every run ends with a mechanical pre-emit scanner (em-dash, decimal comma, thousands separator, % consistency, weekday/month case, comma system, group-compound hyphens) followed by meaning-preservation checks (fact traceability, modality, register). The final version is revised against that scanner, because the first draft always keeps tells the model cannot see while generating.
+Before delivering, it runs a scanner on its own draft. The mechanical checks cover dashes and ranges, decimal commas, thousands separators, consistent `%` spacing, lowercase weekdays and months, the comma system and hyphens in compounds. Then it checks that every fact traces to the input and that modality and register haven't changed. The final version is revised against the scanner, because a first draft always keeps patterns the model can't see while writing it.
 
 It will not invent facts to make the copy better. When a needed fact is missing, it leaves a bracketed gap and lists what you need to supply. That is deliberate: a thin honest draft beats a polished one with plausible invented details.
 
@@ -72,9 +76,16 @@ If you want new copy to sound like you, paste a sample of your own Danish writin
 
 ## Relationship to other skills in this repo
 
-`danisher` supersedes [`humanizer-danish-addendum`](../humanizer-danish-addendum/). The addendum was a bolt-on that required the `humanizer` skill to be installed alongside it. Danisher is standalone and adds a writing mode, Danish typography rules and Danish address-form guidance. Install one or the other, not both.
+`danisher` replaces the `humanizer-danish-addendum` skill, which has been removed from this repo. The addendum was a bolt-on that required the `humanizer` skill to be installed alongside it. Danisher is standalone and adds a writing mode, Danish typography rules and Danish address-form guidance. If you still have the addendum installed, remove it.
 
 For longer Danish academic and workplace reports, use [`danish-report-writer`](../danish-report-writer/) to get the structure and argument right first, then run Danisher as the final language pass.
+
+## Changelog
+
+- **1.2.0:** First numbered release. Earlier changes were not versioned. This release adds:
+  - hyphen rules from Retskrivningsreglerne § 57: a hyphen for a left-out shared part (`drifts- og supportaftaler`), hyphens between equal-ranking parts (`dansk-tysk`, `kunde-leverandør-forholdet`), compounds with digits, symbols and spoken letters (`1990-tallet`, `A-kunder`), a hyphen only at the boundary (`e-mailadresse`, `ph.d.-studerende`), and proper names in group compounds (`New York-kontoret`)
+  - ranges (`mandag-fredag kl. 9-16`, `1. januar – 30. juni`), a spaced hyphen used as a dash, and ISO dates in running text
+  - LOKALISÉR mode (`references/lokalisering.md`) for a reader in Denmark
 
 ## Attribution
 

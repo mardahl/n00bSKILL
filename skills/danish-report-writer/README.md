@@ -58,6 +58,10 @@ Restart the agent application after installing.
 
 `SKILL.md` plus `references/` is the source. The `.skill` file in `package/` is a zip archive renamed with the `.skill` extension for upload, not a separate skill folder.
 
+## Changelog
+
+- **1.0.0:** First numbered release. Earlier changes were not versioned.
+
 ## Attribution
 
 This skill is based primarily on Per Salling's `Skriv bedre rapporter!` article series on [Omatskrive.dk](https://www.omatskrive.dk/rapportteknik/skriv-bedre-rapporter-serie/). Source notes are paraphrased and linked in `references/source-notes.md`.

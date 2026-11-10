@@ -31,6 +31,8 @@ Present as a multiple-choice list. If the host application has an interactive qu
 
 Answer 2 selects a row in the register table below. Answer 3 decides where the point goes and how the text ends: a `bed om handling`-text ends on the ask, a `berolig`-text ends on what happens next, and a `dokumentér`-text does not end on anything.
 
+Intake answers steer form only. Do not write them into the copy: answer `en virksomhed eller et team` selects `I/jer`, it does not license the phrase `til virksomheder og teams`.
+
 Do not ask about facts here. Missing facts become bracketed placeholders, per the hard rule. Asking the user to supply a statistic mid-draft is the same mistake as inventing one, just slower.
 
 ## Pre-flight

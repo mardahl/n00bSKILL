@@ -53,6 +53,10 @@ Restart the agent application after installing.
 
 The skill ends with a pre-finalize self-check the agent runs on the artifact before emitting it.
 
+## Changelog
+
+- **1.0.0:** First numbered release. Earlier changes were not versioned.
+
 ## Attribution
 
 - Authored and maintained as part of `n00bSKILL`.

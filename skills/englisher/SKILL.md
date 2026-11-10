@@ -3,6 +3,8 @@ name: englisher
 description: Use when composing or editing any deliverable containing English prose for an external reader — marketing copy, customer emails, proposals, reports, presentation text, UI text, newsletters, documentation — including when English is only one part of a larger technical artifact (an English appendix, quote, or email body inside other work). Trigger on "write in English", "humanize this text", "make it sound less AI", "fix my English text", or any request whose output is English prose a customer, partner, reviewer or colleague will read. Do NOT trigger on English variable names, English tenant/domain strings, quoted legal clauses used as data, or English words discussed inside a technical discussion.
 license: MIT
 compatibility: claude-code opencode
+metadata:
+  version: "1.0.0"
 ---
 
 # Englisher

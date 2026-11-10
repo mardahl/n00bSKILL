@@ -4,10 +4,12 @@ Load when the pre-emit scanner in SKILL.md flags typography, numbers, dates, cur
 
 | Element | Forkert | Rigtigt |
 | --- | --- | --- |
-| Tankestreg | `15. maj—og derefter` | `15. maj – og derefter` (halvlang streg, mellemrum om) |
+| Tankestreg | `15. maj—og derefter`; `klar - men` | `15. maj – og derefter`; `klar – men` (halvlang streg, mellemrum om). A spaced hyphen is not a tankestreg. |
+| Interval, korte led | `mandag - fredag`, `kl. 9 - 16`, `200 – 300` | `mandag-fredag`, `kl. 9-16`, `200-300`, `Rønne-Ystad-færgen`: bindestreg uden mellemrum. Keep a source's consistent unspaced `–` (`9–16`). Never put spaces around a short range. |
+| Interval, led med mellemrum | `1. januar-30. juni` (læses som `januar-30`) | Prefer `1. januar – 30. juni`, `Kongens Nytorv – Københavns Lufthavn`: tankestreg med mellemrum |
 | Decimaltal | `1.1 mia.`, `9.8` | `1,1 mia.`, `9,8` |
 | Tusindtal | `1,000,000` | `1.000.000` |
-| Dato i brødtekst | `May 15` | `15. maj`. Numeric `15/5/2026` is also correct Danish; `15. maj 2026` is often clearer in running text. For ambiguous dates such as `03/04/2026`, preserve the form and ask which source locale applies. |
+| Dato i brødtekst | `May 15`; `2026-05-15` | `15. maj`; `15. maj 2026`. ISO dates stay in code, logs, tables and file names. Numeric `15/5/2026` is also correct Danish; `15. maj 2026` is often clearer in running text. For ambiguous dates such as `03/04/2026`, preserve the form and ask which source locale applies. |
 | Store tal | `$100 billion` | `100 milliarder $`. Engelsk *billion* = dansk *milliard*. Bevar valutabetegnelsen. |
 | Valuta i brødtekst | `DKK 100`; `$5` | `100 DKK`; `5 $` eller `5 dollar`. Brug kun `kr.` når konteksten allerede fastslår danske kroner. I tabeller kan valutaen stå foran beløbet. |
 | Procent | `20 %` og senere `30%` i samme tekst | `20 %` og `30 %`, eller `20%` og `30%`. Mellemrum er Dansk Sprognævns anbefaling; formen uden er også udbredt. Vælg én form og hold den. |

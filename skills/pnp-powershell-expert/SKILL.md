@@ -1,6 +1,8 @@
 ---
 name: pnp-powershell-expert
 description: Use when writing, debugging, or reviewing PnP.PowerShell automation against SharePoint Online — uploading files, reading/writing list items, migrating content, working with modern pages/web parts, video thumbnails, Graph calls via Invoke-PnPGraphMethod, REST via Invoke-PnPSPRestMethod, or tenant admin work (Get/Set-PnPTenantSite, OneDrive admin audit/repair, raw CSOM Tenant calls). Covers silent write failures, read-only-enforced fields, localized list names, connection/variable pitfalls, and cmdlet gotchas that produce misleading errors.
+metadata:
+  version: "1.0.0"
 ---
 
 # PnP.PowerShell (SharePoint Online)

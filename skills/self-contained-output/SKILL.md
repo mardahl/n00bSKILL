@@ -3,6 +3,8 @@ name: self-contained-output
 description: Use whenever creating or editing content that lives as a file or artifact outside the chat - scripts (PowerShell/Python/Bash), source files, notebooks, README/Markdown, Word/PDF, HTML/CSS/JS/React and UI copy, Dockerfiles, IaC, CI/CD YAML, config, SQL - anything bound for GitHub, another org, or a teammate. Use when draft artifact text mentions "you", "we discussed", "as requested", "the file you sent", or other conversation references. Do NOT use for in-chat conversational answers.
 license: MIT
 compatibility: claude-code opencode
+metadata:
+  version: "1.0.0"
 ---
 
 # Self-Contained Output

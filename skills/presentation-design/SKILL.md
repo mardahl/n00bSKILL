@@ -1,7 +1,8 @@
 ---
 name: presentation-design
 description: Use when designing presentations, structuring presentation content, improving slide flow, creating presentation outlines, making slides more engaging, building technical or IT decks, sourcing Microsoft product or architecture icons, or working on Intune, Entra ID, Conditional Access, Autopilot, Azure, Microsoft 365, Defender, or Purview slides.
-version: 0.3.0-ms
+metadata:
+  version: "0.3.0-ms"
 ---
 
 # Presentation Design (Microsoft-enhanced)

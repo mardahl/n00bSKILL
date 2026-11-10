@@ -31,3 +31,14 @@ Each `skills/<skill-name>/README.md` should answer, near the top:
 - Who should be credited?
 
 For hosted Claude organization skills, the landing page should make the `.skill` upload path obvious before explaining implementation details.
+
+## Versioning
+
+Every skill is versioned on its own with semantic versioning.
+
+- Store the version in the `SKILL.md` frontmatter as `metadata.version`, quoted: `metadata:` then `  version: "1.2.0"`. Do not use a top-level `version` key; the Agent Skills spec does not define one, and strict validators reject unknown keys.
+- Bump the version in the same commit as any change to a skill's `SKILL.md` or bundled files. Use major for changed or removed behaviour that users rely on, minor for new rules or modes, and patch for fixes and wording.
+- Add an entry at the top of the `## Changelog` section in the skill's `README.md`.
+- Rebuild `package/<skill-name>.skill` from the source files after the bump, keeping the package's existing file layout.
+- Tag the commit `<skill-name>-v<version>`, for example `danisher-v1.2.0`, and push the tag.
+- README-only changes need no bump. Rebuild the package if it contains the README.

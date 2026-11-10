@@ -66,6 +66,10 @@ For Claude Code, copy or symlink this folder into:
 
 Restart the agent application after installing.
 
+## Changelog
+
+- **1.0.0:** First numbered release. Earlier changes were not versioned.
+
 ## Attribution
 
 Content distilled from real-world PnP.PowerShell migration and automation work against SharePoint Online tenants, contributed by the repository maintainer. Cmdlet behaviour references ground in the [PnP.PowerShell dev-branch docs and source](https://github.com/pnp/powershell).

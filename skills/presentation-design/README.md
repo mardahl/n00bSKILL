@@ -46,6 +46,10 @@ Restart the agent application after installing.
 
 `SKILL.md`, `references/`, and `scripts/` are the source skill files. The `.skill` file in `package/` is a zip archive renamed with the `.skill` extension for Claude upload, not a separate skill folder.
 
+## Changelog
+
+- **0.3.0-ms:** First release with a changelog. The version number was already in use; the `-ms` suffix marks the Microsoft-enhanced variant. It now lives in `metadata.version` in `SKILL.md`.
+
 ## Attribution
 
 This skill is a Microsoft-enhanced version of the original MIT-licensed `Presentation Design` skill by Roland Huss from [`rhuss/cc-slidev`](https://github.com/rhuss/cc-slidev). The Microsoft presentation additions, icon helper, and packaging in this repository are maintained as part of `n00bSKILL`.

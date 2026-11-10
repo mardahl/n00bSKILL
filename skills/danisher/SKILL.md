@@ -3,6 +3,8 @@ name: danisher
 description: Use when composing or editing any deliverable containing Danish prose for an external reader — kundemails, tilbud, fakturanotater, aftaletekst, rapportafsnit, præsentationstekst, UI-tekst, nyhedsbreve — including when Danish is only one part of a larger technical artifact (a Danish appendix, quote, or email body inside English work). Trigger on "skriv på dansk", "skriv en mail til kunden", "skriv et tilbud", "ret min danske tekst", or any request whose output is Danish prose a customer, partner, myndighed or colleague will read. Do NOT trigger on Danish variable names, Danish tenant/domain strings, Danish legal clauses quoted verbatim as data, or Danish words quoted inside an English technical discussion.
 license: MIT
 compatibility: claude-code opencode
+metadata:
+  version: "1.2.0"
 ---
 
 # Danisher
@@ -15,6 +17,7 @@ Load reference files on demand:
 - `references/registers.md` — register table, intake, pre-flight, kanal. Load when composing new Danish from a brief or choosing a register row.
 - `references/danish-tells.md` — D1–D10 with worked examples. Load when auditing or editing Danish text, or when a scanner check needs a worked example.
 - `references/typography.md` — D8 typography and number table. Load when the scanner flags typography, numbers, dates, currency or comma system.
+- `references/lokalisering.md` — LOKALISÉR mode for a reader in Denmark (`da-DK`). Load when the Modes table routes there.
 
 ## Hard rule: never invent facts
 
@@ -47,6 +50,9 @@ Route on input.
 | Existing Danish text | REDIGER | Draft rewrite, run scanner, final version |
 | A brief, topic or bullet points | SKRIV | Write Danish copy that never had the tells |
 | English text plus "på dansk" | SKRIV, source-bound | Write from meaning while preserving every source claim and protected string |
+| Any input or draft with non-Danish locale material (`$`, `11/28`, `2 PM`, EST, ZIP, SSN, HIPAA, Thanksgiving, "all 50 states", `thrilled to announce`), or a request to `lokalisere`/`tilpasse til det danske marked` | LOKALISÉR | Load `references/lokalisering.md` before writing, then apply it to those elements |
+
+The reader is always in Denmark (`da-DK`). Models default to American conventions even when writing Danish from scratch, so check your own SKRIV draft for the markers above too.
 
 Sentence-by-sentence translation produces nearly every problem in `references/danish-tells.md`. Read English, understand the point, write Danish from scratch without dropping or changing any source meaning. If user requests a transformation, only its explicit dimensions may change.
 
@@ -56,13 +62,13 @@ Run before delivering. Mechanical checks first, meaning-preservation checks seco
 
 **Mechanical**
 
-1. Em-dash `—` present → must be `–` with surrounding spaces. See `references/typography.md`.
+1. Em-dash `—` or a spaced hyphen ` - ` used as a dash → `–` with surrounding spaces. Short ranges take a hyphen without spaces (`mandag-fredag`, `kl. 9-16`); ranges whose ends contain spaces take a spaced tankestreg (`1. januar – 30. juni`). See `references/typography.md`.
 2. Decimal `.` in numbers (`1.100,00`, `9.8`) → must be `,` (`1.100,00`, `9,8`). See `references/typography.md`.
 3. Thousands `,` (`1,000,000`) → must be `.` (`1.000.000`). See `references/typography.md`.
 4. `%` spacing inconsistent within document (`20 %` then `30%`) → pick one form and hold it. See `references/typography.md`.
 5. Weekday, month or nationality adjective capitalized (`Mandag`, `Maj`, `Dansk lovgivning`) → lowercase (`mandag`, `maj`, `dansk`). See `references/typography.md`.
 6. Comma system: one chosen, held throughout; `såfremt`/`hvis`/`når`/`at` clauses consistent within the chosen system. See `references/typography.md`.
-7. Group compound missing boundary hyphen (`Conditional Access politik`, `Zero Trust arkitektur`) → `Conditional Access-politik`, `Zero Trust-arkitektur`. See `references/danish-tells.md` D7.
+7. Hyphen missing or misplaced in a compound: group compound without boundary hyphen (`Conditional Access politik` → `Conditional Access-politik`); left-out shared part (`drifts og supportaftaler` → `drifts- og supportaftaler`); abbreviation, digit or spoken letter (`1990 tallet` → `1990-tallet`, `A kunder` → `A-kunder`); inner hyphens in a proper name (`New-York-kontoret` → `New York-kontoret`). See `references/danish-tells.md` D7.
 
 **Meaning preservation**
 

@@ -68,6 +68,10 @@ If you want the output to sound like you, paste a sample of your own writing and
 
 `englisher` is the English counterpart to [`danisher`](../danisher/). Same structure, same guarantees (mode routing, pre-emit scanner, no invented facts), with English AI-writing patterns instead of Danish ones. Use `danisher` for Danish output, `englisher` for English output.
 
+## Changelog
+
+- **1.0.0:** First numbered release. Earlier changes were not versioned.
+
 ## Attribution
 
 - Detection rules and worked examples derive from the [Humanizer skill by blader](https://github.com/blader/humanizer) (MIT)
