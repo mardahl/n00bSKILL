@@ -210,7 +210,17 @@ Legitimate fagsprog in M365, security and infrastructure is naturally precise, p
 - English technical vocabulary kept verbatim is correct Danish IT practice, not a D1 calque. `Vi ruller en Intune-policy ud` is fine. `Vi ruller en politik om enhedsovervågning ud`, written to avoid the English, is what reads wrong.
 - The tells above are about register and rhythm, not terminology. Fix the flatness, keep the precision.
 - In vendor-statement summaries, repeating `Microsoft oplyser, at ...` several times is correct practice, not an AI tell.
+- Long sentences and long compounds are not tells. AI output runs shorter and simpler than human Danish, not longer. D3 targets heavy fronting that buries the point and over-explicit connectors; it is not licence to split a correctly built long sentence. D5 targets equal-length sentences; splitting a long one into mid-length ones makes D5 worse. In REDIGER, split only when the split fixes a named tell or a grammatical fault, and every causal, contrastive and conditional link (`fordi`, `men`, `selvom`, `hvis`) survives with the same scope. Simplify for readability only in drift, status, UI or instructions, or when the user asks for it.
 
 ## Voice matching
 
 If the user supplies a sample of their own Danish writing, read it first. In brief-based SKRIV, match sentence length, register, tiltaleform and punctuation habits. Reuse a recurring phrase only when the brief independently supports every claim, actor, modality and commitment in it; otherwise copy its structural pattern, not its content. In source-bound modes, borrow a pattern only when source meaning, stance and protected wording remain unchanged. Without a sample, use the varied default voice only in brief-based SKRIV.
+
+### Dimmer check
+
+Models imitating a writer keep the writer's level of difficulty in relative terms but lower it in absolute terms: shorter sentences, fewer long words, more generic phrasing. Reusing the sample's openers (`Min fornemmelse er, at`) and matching its total word count does not count as matching its voice. After drafting, compare the draft with the sample on the two LIX inputs:
+
+- average words per sentence
+- share of words with more than six letters
+
+If either is clearly lower in the draft (roughly under three-quarters of the sample's value), the draft has been flattened. Rebuild sentences the way the sample builds them, for example ledsætninger, an indskud, a `fordi`-chain. Fill them only with facts and stances the brief supplies. Never pad length with invented claims, reasons or observations; a shorter draft with bracketed gaps beats a long one with invented content. Invented content includes expert generalisations (`den største faldgrube i kommunalt regi er…`, `de fleste organisationer…`), advice or diagnoses the brief does not give, and scene details (`over en kop kaffe`). Writing them in the writer's voice does not make them supplied. When the brief has too few facts, build the long sentences from the facts you have plus bracketed gaps. The sample's sentence length overrides the register table in `references/registers.md`.

@@ -428,6 +428,7 @@ A concrete moment followed by an abstract gloss on what it "says about" identity
 A person may use some of these patterns. Do not treat any item below as proof by itself. The target is density and co-occurrence, not zero occurrences. Humans use all of these patterns occasionally. Flag clusters and repetition, not isolated instances. Always preserve the author's voice: rewrite toward the writer's register, never toward a neutral average.
 
 - **Perfect grammar and consistent style.** Many writers are professionals or have been edited. Polish does not equal AI.
+- **Long sentences and long words.** AI output runs shorter and simpler than human writing, not longer. A long, correctly built sentence is not a run-on and not a tell. In EDIT, do not split a sentence or swap a long word for a short one only to make the text easier or punchier. Split only when the split fixes a named tell (such as E9 or E11) or a grammatical fault, and every causal, contrastive and conditional link survives. Simplify for readability only when the register is instructions or notices, or the user asks for it.
 - **Mixed casual and formal styles.** This can reflect the writer's field, age, or personal habits.
 - **"Bland" or "robotic" prose.** AI prose has *specific* tells. Generic dryness without those tells is just dry writing.
 - **Formal or academic words.** E7 lists specific words that AI writing overuses. Do not simplify every formal word.

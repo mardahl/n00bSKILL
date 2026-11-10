@@ -4,7 +4,7 @@ description: Use when composing or editing any deliverable containing Danish pro
 license: MIT
 compatibility: claude-code opencode
 metadata:
-  version: "1.2.0"
+  version: "1.3.0"
 ---
 
 # Danisher
@@ -15,7 +15,7 @@ AI-written Danish carries English syntax, idioms and rhythm even when grammar is
 
 Load reference files on demand:
 - `references/registers.md` — register table, intake, pre-flight, kanal. Load when composing new Danish from a brief or choosing a register row.
-- `references/danish-tells.md` — D1–D10 with worked examples. Load when auditing or editing Danish text, or when a scanner check needs a worked example.
+- `references/danish-tells.md` — D1–D10 with worked examples, plus voice matching and the dimmer check. Load when auditing or editing Danish text, when the user supplies a writing sample, or when a scanner check needs a worked example.
 - `references/typography.md` — D8 typography and number table. Load when the scanner flags typography, numbers, dates, currency or comma system.
 - `references/lokalisering.md` — LOKALISÉR mode for a reader in Denmark (`da-DK`). Load when the Modes table routes there.
 
@@ -75,6 +75,7 @@ Run before delivering. Mechanical checks first, meaning-preservation checks seco
 8. Every number, name, date and commitment traceable to input. Untraceable → replace with bracketed placeholder or delete.
 9. Modality unchanged: no `kan` → present tense, no `vil` → present tense, no `bør` → `skal`, no modal removed or strengthened. See worked example in `references/danish-tells.md` D10.
 10. Register row selected and held; no understatement in myndigheds-, jura-, sikkerheds-, drift-, status- eller SLA-tekst. See `references/registers.md`.
+11. Not flattened. REDIGER: no sentence split and no long word or compound swapped for a short one only to ease reading; length is not a tell. With a writing sample: draft passes the dimmer check in `references/danish-tells.md` (Voice matching). Persuasive text without a sample: not a run of even, mid-length sentences with the most obvious word in every slot.
 
 ## REDIGER mode: editing existing Danish text
 

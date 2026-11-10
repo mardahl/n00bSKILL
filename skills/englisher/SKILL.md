@@ -4,7 +4,7 @@ description: Use when composing or editing any deliverable containing English pr
 license: MIT
 compatibility: claude-code opencode
 metadata:
-  version: "1.0.0"
+  version: "1.1.0"
 ---
 
 # Englisher
@@ -68,6 +68,7 @@ Run before delivering, in every mode. Each item passes or fails; fix every failu
 12. Modality, tense, quantifiers, negation scope unchanged from source or brief.
 13. Vague attribution still vague or marked `[source?]` — never replaced with an invented citation.
 14. Calibration and false positives checked: density and co-occurrence are the target, not zero occurrences. Flag clusters and repetition, not isolated instances. Polish, mixed register, single transition words, auto-curled quotes, lone em dashes, deliberate repetition are not tells by themselves. Preserve the author's voice. See the false-positives list in `references/english-tells.md`.
+15. Not flattened. EDIT: no sentence split and no long word swapped for a short one only to ease reading; length is not a tell. With a writer's sample: draft passes the dimmer check in `references/voice.md`. Persuasive text without a sample: not a run of even, mid-length sentences with the most obvious word in every slot.
 
 ## EDIT mode: editing existing English text
 

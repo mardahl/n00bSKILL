@@ -31,6 +31,11 @@ Present as a multiple-choice list. If the host application has an interactive qu
 
 Answer 2 selects a row in the register table below. Answer 3 decides where the point goes and how the text ends: a `bed om handling`-text ends on the ask, a `berolig`-text ends on what happens next, and a `dokumentér`-text does not end on anything.
 
+Answer 3 also sets how much effort the text may ask of the reader:
+
+- **informere, dokumentere, bede om handling** in drift, status, UI or instructions: low reading effort is the goal. Short, predictable sentences are correct here. Do not add variation or rarer words to sound less like AI.
+- **sælge eller overbevise**, and any text meant to hold attention (tilbud, ansøgning, fagpresse, LinkedIn): the flat, even-length draft with the most obvious word in every slot is the weakness. Choose the more precise word, not the fancier one, and let sentence length follow the argument. Readers skim AI-smoothed text more and engage less with it.
+
 Intake answers steer form only. Do not write them into the copy: answer `en virksomhed eller et team` selects `I/jer`, it does not license the phrase `til virksomheder og teams`.
 
 Do not ask about facts here. Missing facts become bracketed placeholders, per the hard rule. Asking the user to supply a statistic mid-draft is the same mistake as inventing one, just slower.
@@ -55,7 +60,7 @@ Settle before first sentence in brief-based SKRIV. Intake answers 1 and 2 cover 
 
 3. **Afsender.** An explicit brief always wins. Use `vi` only when brief identifies the writing organization as claimant; use `jeg` only when it identifies an individual. Otherwise stay impersonal or use `[afsender]`. Never invent `vi`, `jeg` or an addressee to activate a passive.
 4. **Point first.** Say the thing in first or second sentence. Do not warm up for three sentences of context.
-5. **Rhythm.** Vary sentence length on purpose, and let some sentences be very short. Do not apply a quota: long-long-short in every paragraph is itself uniform, which is the tell you are trying to kill. Diagnostic: if you can predict the shape of the next sentence from the last three, rewrite.
+5. **Rhythm.** Vary sentence length on purpose, and let some sentences be very short. Do not apply a quota: long-long-short in every paragraph is itself uniform, which is the tell you are trying to kill. Diagnostic: if you can predict the shape of the next sentence from the last three, rewrite. If the user supplied a writing sample, its sentence length overrides the table; run the dimmer check under Voice matching in `danish-tells.md`.
 6. **Modalpartikler.** Use only when they express a stance the brief supports. Diagnostic, not quota: short text may need none, and overdosing sounds like a transcript. See `danish-tells.md` D6.
 7. **Konkrete tal og navne slår adjektiver, når du har dem.** `fire regioner` beats `en række regioner`. `9,8 i CVSS` beats `kritisk`, if someone gave you the 9,8. If brief gave no number, write `[antal]`, not a number you made up. See the hard rule in SKILL.md.
 

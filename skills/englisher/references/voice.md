@@ -12,6 +12,15 @@ If the user provides a sample of their own writing, analyze it before rewriting:
 
 A writing sample takes priority over the style rules in `references/english-tells.md`. If the sample uses em dashes, keep them at about the same rate. If the sample opens sentences with "And" or fragments for rhythm, keep that too. The tells list describes what AI produces by default; a real writer's deliberate habits are not tells.
 
+### Dimmer check
+
+Models imitating a writer keep the writer's level of difficulty in relative terms but lower it in absolute terms: shorter sentences, fewer long words, more generic phrasing. Reusing the sample's openers and matching its total word count does not count as matching its voice. After drafting, compare the draft with the sample on two numbers:
+
+- average words per sentence
+- share of words with seven or more letters
+
+If either is clearly lower in the draft (roughly under three-quarters of the sample's value), the draft has been flattened. Rebuild sentences the way the sample builds them, for example subordinate clauses, a qualification inside the sentence, a causal `because` chain. Fill them only with facts and stances the brief supplies. Never pad length with invented claims, reasons or observations; a shorter draft with bracketed gaps beats a long one with invented content. Invented content includes expert generalisations (`the biggest pitfall is usually…`, `most councils…`), advice or diagnoses the brief does not give, and scene details (`on the train home`). Writing them in the writer's voice does not make them supplied. When the brief has too few facts, build the long sentences from the facts you have plus bracketed gaps. The sample's sentence length overrides the register defaults below.
+
 ## Personality: when it fits
 
 Removing AI patterns is only half the job. The result should still sound like a person.
@@ -43,11 +52,17 @@ Before composing from a brief, establish up to three things. Ask only what the b
 
 If the brief already makes all three unambiguous, ask nothing and write.
 
+The goal also sets how much effort the text may ask of the reader:
+
+- **Inform, document, or get the reader to act** in instructions, notices, status updates or UI text: low reading effort is the goal. Short, predictable sentences are correct here. Do not add variation or rarer words to sound less like AI.
+- **Persuade**, and any text meant to hold attention (proposals, cover letters, opinion pieces, LinkedIn posts): the flat, even-length draft with the most obvious word in every slot is the weakness. Choose the more precise word, not the fancier one (fancier is E7 and E11), and let sentence length follow the argument. Readers skim AI-smoothed text more and engage less with it.
+
 ## Checklist before delivering new copy
 
 - Reader, text type and goal settled (asked or inferred).
 - Register chosen and held throughout.
 - Every fact from the brief used; every missing fact a visible bracketed placeholder.
 - No invented facts, names, numbers, dates, quotes or citations.
-- Writer's sample (if given) drives sentence length, punctuation and word choice.
+- Writer's sample (if given) drives sentence length, punctuation and word choice, and the draft passes the dimmer check.
+- Reading effort matches the goal: plain for instructions and notices, not flattened for persuasion.
 - Personality level matches the text type table.

@@ -82,6 +82,7 @@ For longer Danish academic and workplace reports, use [`danish-report-writer`](.
 
 ## Changelog
 
+- **1.3.0:** Stops the skill from flattening your text. It no longer splits correct long sentences or swaps long words for short ones just to make a text easier to read. When you supply a writing sample, it checks the draft's sentence length and share of long words against the sample, and builds longer sentences from your facts plus bracketed gaps instead of invented claims. Reading effort now follows the text's purpose: plain for instructions and driftstekst, not smoothed out for persuasive text.
 - **1.2.0:** First numbered release. Earlier changes were not versioned. This release adds:
   - hyphen rules from Retskrivningsreglerne § 57: a hyphen for a left-out shared part (`drifts- og supportaftaler`), hyphens between equal-ranking parts (`dansk-tysk`, `kunde-leverandør-forholdet`), compounds with digits, symbols and spoken letters (`1990-tallet`, `A-kunder`), a hyphen only at the boundary (`e-mailadresse`, `ph.d.-studerende`), and proper names in group compounds (`New York-kontoret`)
   - ranges (`mandag-fredag kl. 9-16`, `1. januar – 30. juni`), a spaced hyphen used as a dash, and ISO dates in running text
@@ -90,3 +91,4 @@ For longer Danish academic and workplace reports, use [`danish-report-writer`](.
 ## Attribution
 
 - Danish rules and worked examples are rebuilt and honed against [Dansk Sprognævn](https://dsn.dk) and other official Danish language sources
+- The anti-flattening rules (1.3.0) draw on Ilyas, Tashk, Beier and Bækgaard, ["Reading the Readers Mind through Eye Tracking: Can AI Generated Texts Match Human Authors?"](https://dl.acm.org/doi/10.1145/3715669.3726846), ETRA 2025. In that study, Copilot imitations of Danish authors were simpler than the originals and were read more like skimming. The study had 12 readers, one model and literary texts, so the skill uses it as a reason for caution, not as a detection rule

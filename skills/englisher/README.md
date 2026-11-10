@@ -70,6 +70,7 @@ If you want the output to sound like you, paste a sample of your own writing and
 
 ## Changelog
 
+- **1.1.0:** Stops the skill from flattening your text. It no longer splits correct long sentences or swaps long words for short ones just to make a text easier to read. When you supply a writing sample, it checks the draft's sentence length and share of long words against the sample, and builds longer sentences from your facts plus bracketed gaps instead of invented claims. Reading effort now follows the text's goal: plain for instructions and notices, not smoothed out for persuasive text.
 - **1.0.0:** First numbered release. Earlier changes were not versioned.
 
 ## Attribution
@@ -77,3 +78,4 @@ If you want the output to sound like you, paste a sample of your own writing and
 - Detection rules and worked examples derive from the [Humanizer skill by blader](https://github.com/blader/humanizer) (MIT)
 - Humanizer's patterns come from [Wikipedia: Signs of AI writing](https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing), maintained by WikiProject AI Cleanup
 - Skill structure mirrors [`danisher`](../danisher/) in this repository
+- The anti-flattening rules (1.1.0) draw on Ilyas, Tashk, Beier and Bækgaard, ["Reading the Readers Mind through Eye Tracking: Can AI Generated Texts Match Human Authors?"](https://dl.acm.org/doi/10.1145/3715669.3726846), ETRA 2025. In that study, Copilot imitations of Danish authors were simpler than the originals and were read more like skimming. The study had 12 readers, one model and literary texts, so the skill uses it as a reason for caution, not as a detection rule
